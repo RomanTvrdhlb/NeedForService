@@ -1,0 +1,15 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.header {
+  &-box {
+    padding-top: 12px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: clamp(20px, 7.04vw, 98px);
+    align-items: center;
+  }
+}

@@ -1,0 +1,43 @@
+@keyframes leftToRight {
+  0% {
+ 
+    background-position: left;
+  }
+
+  100% {
+
+    background-position: right;
+  }
+}
+
+.main-button {
+  display: flex;
+
+  width: 203px;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  color: rgba(var(--cl-a),1.0);
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+
+  background-image: linear-gradient(90deg, #1E47B0 0%, #800080 99.74%, #1E47B0 100%);
+  background-size: 300%;
+  background-position: left;
+  transition: all 0.5s;
+  background-repeat: repeat;
+
+  // animation: leftToRight 5s infinite alternate;
+
+  &:hover{
+    background-position: right;
+  }
+}
+
+
+

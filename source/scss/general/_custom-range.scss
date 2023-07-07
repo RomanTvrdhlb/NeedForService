@@ -1,0 +1,47 @@
+.custom-range {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 15px;
+  align-items: center;
+  max-width: 285px;
+  width: 100%;
+
+  &__range {
+    -webkit-appearance: none;
+    height: 3px;
+    background: var(--bg-g);
+    border-radius: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='286' height='3' fill='none'%3E%3Cpath stroke='%232282F3' stroke-linecap='round' stroke-width='2' d='M284.328 1.834H1.926'/%3E%3C/svg%3E");
+    background-size: 70% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    background-color: rgba(var(--bg-f),1.0);
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 4px;
+      width: 4px;
+      border-radius: 50%;
+      background: var(--bg-a);
+      cursor: ew-resize;
+      box-shadow: 0 0 2px 0 #555;
+      transition: background .3s ease-in-out;
+
+      @include tablet {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+  }
+
+  &__counter {
+    font-family: var(--font-family2);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 27px;
+    color: rgba(var(--cl-a),1.0);
+  }
+}
