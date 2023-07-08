@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   width: 100%;
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
@@ -82,92 +83,6 @@ main {
   }
 }
 
-
-.has-bg {
-  .container:nth-child(1) {
-    padding-top: clamp(46px, 6.05vw, 75px);
-    padding-bottom: clamp(46px, 6.05vw, 59px);
-    background-image: url(../img/logo-bg.svg);
-    background-position: 81% center;
-    background-repeat: no-repeat;
-    background-size: clamp(126px, 19.748vw, 235px);
-
-    @include mobile {
-      background-position: 100% top;
-    }
-  }
-}
-
-.dark-section {
-  background: rgba(var(--bg-n),1.0);
-  position: relative;
-  z-index: 0;
-
-  &::before, &:after {
-    content: '';
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-    pointer-events: none;
-    width: 313px;
-    height: 984px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &::before {
-    background-image: var(--dark-left);
-    left: 0;
-    background-position: left;
-  }
-  &::after {
-    transform: scaleX(-1) translateY(-50%);
-    right: 0;
-    background-image: var(--dark-left);
-    background-position: right;
-  }
-}
-
-.mode-section{
-  position: relative;
-  z-index: 0;
-
-  &::before, &:after {
-    content: '';
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-    pointer-events: none;
-    width: 452px;
-    height: 452px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #6866F6;
-    filter: blur(132.5px);
-  }
-
-  &::before {
-    // background-image: var(--dark-left);
-    left: 0;
-    transform: translate(-100%, -50%);
-    // background-position: left;
-  }
-  &::after {
-    // transform: scaleX(-1) translateY(-50%);
-    right: 0;
-    transform: translate(100%, -50%);
-    // background-image: var(--dark-left);
-    // background-position: right;
-  }
-
-  &--custom{
-    &::before, &:after {
-      top: 80%;
-    }
-  }
-}
 
 *,
 *::after,

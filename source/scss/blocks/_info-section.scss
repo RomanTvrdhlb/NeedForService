@@ -1,5 +1,4 @@
 .info-section{
-    margin-bottom: clamp(41px, 11.279vw, 157px);
     background-color: rgba(var(--bg-b),1.0);
     padding:clamp(40px, 6.466vw, 90px) 0 clamp(51px, 6.466vw, 90px) ;
     position: relative;
@@ -27,62 +26,7 @@
         flex-direction: column;
         align-items: center;
         grid-gap: clamp(33px, 3.592vw, 50px);
-        padding-top: clamp(10px, 1.437vw, 20px);
-
-
-        // --text: #2B3044;
-        // --line: #BBC1E1;
-        // --line-active: #275EFE;
-        // -webkit-font-smoothing: antialiased;
-
-        // * {
-        //     box-sizing: inherit;
-        //   }
-        //   *:before, *:after {
-        //     box-sizing: inherit;
-        //   }
-        // p{
-          
-        //     color: rgba(var(--cl-a),1.0);
-        //     font-family: var(--font-family);
-        //     font-size: clamp(15px, 1.724vw, 24px);
-        //     font-style: normal;
-        //     font-weight: 500;
-        //     line-height: 150%; 
-        //     margin: 0;
-
-        //     a{
-        //         display: inline-block;
-        //         position: relative;
-        //         text-decoration: none;
-        //         color: inherit;
-        //         margin: 0 var(--spacing, 0px);
-        //         transition: margin 0.25s;
-
-        //         &:hover{
-        //             --spacing: 4px;
-        //             --stroke: var(--line-active);
-        //             --stroke-delay: .1s;
-        //             --offset: 180px;
-        //         }
-
-        //         svg{
-        //             width: 76px;
-        //             height: 40px;
-        //             position: absolute;
-        //             left: 50%;
-        //             bottom: 0;
-        //             transform: translate(-50%, 7px) translateZ(0);
-        //             fill: none;
-        //             stroke: var(--stroke, var(--line));
-        //             stroke-linecap: round;
-        //             stroke-width: 2px;
-        //             stroke-dasharray: var(--offset, 69px) 278px;
-        //             stroke-dashoffset: 361px;
-        //             transition: stroke 0.25s ease var(--stroke-delay, 0s), stroke-dasharray 0.35s;
-        //         }
-        //     }
-        // }       
+        padding-top: clamp(10px, 1.437vw, 20px);  
     }
 
     .default-top{

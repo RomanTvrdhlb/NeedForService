@@ -1,0 +1,36 @@
+.contact-section{
+    position: relative;
+    
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__box{
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+    }
+
+    &__picture{
+        height: clamp(348px, 56.178vw, 782px);
+
+        img,picture{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__map{
+        height: clamp(300px, 32.615vw, 454px);
+        width: 100%;
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap:  clamp(39px, 14.44vw, 201px);
+    }
+}

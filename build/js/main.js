@@ -11,6 +11,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_getDinamicHeight__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/getDinamicHeight */ "./source/js/components/getDinamicHeight.js");
 /* harmony import */ var _components_hoverCards__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/hoverCards */ "./source/js/components/hoverCards.js");
+/* harmony import */ var _components_stickyHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/stickyHeader */ "./source/js/components/stickyHeader.js");
 // import './components/animations';
 
 // import './components/sliders';
@@ -23,6 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 // import './components/accordions';
 // import './components/range';
 // import './components/anchor';
+
 
 
 /***/ }),
@@ -151,6 +153,47 @@ function mouseHover(items, item) {
 }
 mainCards.forEach(function (card) {
   mouseHover(mainCards, card);
+});
+
+/***/ }),
+
+/***/ "./source/js/components/stickyHeader.js":
+/*!**********************************************!*\
+  !*** ./source/js/components/stickyHeader.js ***!
+  \**********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/customFunctions */ "./source/js/functions/customFunctions.js");
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../_vars */ "./source/js/_vars.js");
+
+
+const {
+  header
+} = _vars__WEBPACK_IMPORTED_MODULE_1__["default"];
+let lastScroll = 0;
+const defaultOffset = 40;
+function stickyHeaderFunction(breakpoint) {
+  let containerWidth = document.documentElement.clientWidth;
+  if (containerWidth > `${breakpoint}`) {
+    const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+    const containHide = () => header.classList.contains('sticky');
+    window.addEventListener('scroll', () => {
+      if (scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset) {
+        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.addCustomClass)(header, "sticky");
+      } else if (scrollPosition() < defaultOffset) {
+        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.removeCustomClass)(header, "sticky");
+      }
+      lastScroll = scrollPosition();
+    });
+  }
+}
+window.addEventListener('resize', () => {
+  stickyHeaderFunction(1024);
+});
+window.addEventListener('DOMContentLoaded', () => {
+  stickyHeaderFunction(1024);
 });
 
 /***/ }),

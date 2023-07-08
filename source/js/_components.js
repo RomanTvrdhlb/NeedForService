@@ -11,6 +11,7 @@ import './components/getDinamicHeight';
 // import './components/range';
 // import './components/anchor';
 import './components/hoverCards';
+import './components/stickyHeader';
 
 
 

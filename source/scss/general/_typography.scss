@@ -1,6 +1,5 @@
 .animation-text {
   -webkit-font-smoothing: antialiased;
-  --text: #2b3044;
   --line: #bbc1e1;
   --line-active: #275efe;
 
@@ -12,7 +11,7 @@
   line-height: 150%;
   margin: 0;
 
-  a {
+  &__link {
     display: inline-block;
     position: relative;
     text-decoration: none;
@@ -25,7 +24,7 @@
       --stroke: var(--line-active);
       --stroke-delay: 0.1s;
       --offset: 180px;
-      color: rgba(var(--cl-f),1.0);
+      color: rgba(var(--cl-f), 1);
     }
 
     svg {
@@ -34,11 +33,10 @@
       position: absolute;
       left: 50%;
       bottom: 0;
-      transform: translate(-50%, 21px) translateZ(0);
+      transform: translate(-49%, 21px) translateZ(0);
       fill: none;
       stroke: var(--stroke, var(--line));
       stroke-linecap: round;
-      stroke-width: 1.5px;
       stroke-dasharray: var(--offset, 69px) 278px;
       stroke-dashoffset: 361px;
       transition: stroke 0.25s ease var(--stroke-delay, 0s),

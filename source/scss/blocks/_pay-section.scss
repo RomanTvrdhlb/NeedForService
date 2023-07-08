@@ -1,0 +1,15 @@
+.pay-section{
+    
+    &__box{
+        padding: clamp(41px, 11.279vw, 157px) 0 clamp(51px, 11.997vw, 167px);
+  
+     display: flex;
+     position: relative;
+    }
+
+    &__picture{
+        position: absolute;
+        right: 0;
+        bottom: -3px;
+    }
+}
