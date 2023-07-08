@@ -1,3 +1,56 @@
+.animation-text {
+  -webkit-font-smoothing: antialiased;
+  --text: #2b3044;
+  --line: #bbc1e1;
+  --line-active: #275efe;
 
+  color: rgba(var(--cl-a), 1);
+  font-family: var(--font-family);
+  font-size: clamp(15px, 1.724vw, 24px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  margin: 0;
 
+  a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    margin: 0 var(--spacing, 0px);
+    transition: margin 0.25s, color 0.4s;
 
+    &:hover {
+      --spacing: 15px;
+      --stroke: var(--line-active);
+      --stroke-delay: 0.1s;
+      --offset: 180px;
+      color: rgba(var(--cl-f),1.0);
+    }
+
+    svg {
+      width: 200px;
+      height: 90px;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 21px) translateZ(0);
+      fill: none;
+      stroke: var(--stroke, var(--line));
+      stroke-linecap: round;
+      stroke-width: 1.5px;
+      stroke-dasharray: var(--offset, 69px) 278px;
+      stroke-dashoffset: 361px;
+      transition: stroke 0.25s ease var(--stroke-delay, 0s),
+        stroke-dasharray 0.35s;
+    }
+  }
+
+  * {
+    box-sizing: inherit;
+  }
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+}

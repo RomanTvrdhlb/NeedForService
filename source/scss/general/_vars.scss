@@ -46,8 +46,9 @@
   --cl-c: #{HexToRGB(#FEC200)}; // rgba(var(--cl-c),1.0);
   --cl-d: #{HexToRGB(#1E47B0)}; // rgba(var(--cl-d),1.0);
   --cl-e: #{HexToRGB(#333333)}; // rgba(var(--cl-e),1.0);
+  --cl-f: #{HexToRGB(#275efe)}; // rgba(var(--cl-f),1.0);
 
-  --cl-f: #{HexToRGB(#ABB8EB)}; // rgba(var(--cl-f),1.0);
+
   --cl-g: #{HexToRGB(#050E1D)}; // rgba(var(--cl-g),1.0);
   --cl-h: #{HexToRGB(#081428)}; // rgba(var(--cl-h),1.0);
   --cl-i: #{HexToRGB(#66F6A8)}; // rgba(var(--cl-i),1.0);
@@ -124,4 +125,5 @@
 // --------------- svg fill cl variable ---------------
 --svg-fill-a: #ffffff; // var(--svg-fill-a);
 --svg-fill-b: #FEC200; // var(--svg-fill-b);
+--svg-fill-c: #2D74FF; // var(--svg-fill-c);
 }
