@@ -20,27 +20,8 @@ export default {
   header: document.querySelector(".header"),
 
   // default variables
-  passForm: [...document.querySelectorAll('.password-form__label')],
-  footerLabel: document.querySelector('.footer__label'),
-  footer: document.querySelector('.footer'),
-  footerColl: document.querySelector('.footer__coll'),
-  parrentBuffer: [...document.querySelectorAll('.buffer')],
-  counter: document.querySelectorAll('.main-section__image [data-to]'),
-  heroImage: document.querySelector('.main-section__image'),
-  hiddenList: document.querySelector('.hidden-list'),
-  mobileMenu: document.querySelector('.mobile-menu'),
-  mainLinks: [...document.querySelectorAll('.mobile-link')],
-  logoSlider: document.querySelector('.main-section__slider .swiper-container'),
-  defaultSliders: [...document.querySelectorAll('.slider-line')],
-  partnersSliders: document.querySelector('.partners-box__slider'),
-  partnersBox: document.querySelector('.partners-box'),
-  partnersBoxTitle: document.querySelector('.partners-box .main-top'),
-  partnersBoxInner: document.querySelector('.partners-box .partners-box__inner'),
-  partnersBoxBtnLeft: document.querySelector('.partners-box .swiper-button-prev'),
-  partnersBoxBtnRight: document.querySelector('.partners-box .swiper-button-next'),
-  tokenDesktop: document.querySelector('.about-token.dark-section .main-top'),
-  tokenBtn: document.querySelector('.about-token.dark-section .about-token__button'),
-  tokenMobile: document.querySelector('.about-token.dark-section .about-token__list'),
+  mainCards: [...document.querySelectorAll('.main-card')],
+
 
 
   // logoSlider: [...document.querySelectorAll('.payment-slider .swiper-container')],

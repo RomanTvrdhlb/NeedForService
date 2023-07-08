@@ -10,6 +10,7 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_getDinamicHeight__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/getDinamicHeight */ "./source/js/components/getDinamicHeight.js");
+/* harmony import */ var _components_hoverCards__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/hoverCards */ "./source/js/components/hoverCards.js");
 // import './components/animations';
 
 // import './components/sliders';
@@ -22,6 +23,7 @@ __webpack_require__.r(__webpack_exports__);
 // import './components/accordions';
 // import './components/range';
 // import './components/anchor';
+
 
 /***/ }),
 
@@ -54,27 +56,7 @@ __webpack_require__.r(__webpack_exports__);
   // mobileMenu: document.querySelector('.header-box__nav'),
   header: document.querySelector(".header"),
   // default variables
-  passForm: [...document.querySelectorAll('.password-form__label')],
-  footerLabel: document.querySelector('.footer__label'),
-  footer: document.querySelector('.footer'),
-  footerColl: document.querySelector('.footer__coll'),
-  parrentBuffer: [...document.querySelectorAll('.buffer')],
-  counter: document.querySelectorAll('.main-section__image [data-to]'),
-  heroImage: document.querySelector('.main-section__image'),
-  hiddenList: document.querySelector('.hidden-list'),
-  mobileMenu: document.querySelector('.mobile-menu'),
-  mainLinks: [...document.querySelectorAll('.mobile-link')],
-  logoSlider: document.querySelector('.main-section__slider .swiper-container'),
-  defaultSliders: [...document.querySelectorAll('.slider-line')],
-  partnersSliders: document.querySelector('.partners-box__slider'),
-  partnersBox: document.querySelector('.partners-box'),
-  partnersBoxTitle: document.querySelector('.partners-box .main-top'),
-  partnersBoxInner: document.querySelector('.partners-box .partners-box__inner'),
-  partnersBoxBtnLeft: document.querySelector('.partners-box .swiper-button-prev'),
-  partnersBoxBtnRight: document.querySelector('.partners-box .swiper-button-next'),
-  tokenDesktop: document.querySelector('.about-token.dark-section .main-top'),
-  tokenBtn: document.querySelector('.about-token.dark-section .about-token__button'),
-  tokenMobile: document.querySelector('.about-token.dark-section .about-token__list')
+  mainCards: [...document.querySelectorAll('.main-card')]
 
   // logoSlider: [...document.querySelectorAll('.payment-slider .swiper-container')],
   // mainLinks: [...document.querySelectorAll('.main-nav__link')],
@@ -134,6 +116,45 @@ const {
 
 /***/ }),
 
+/***/ "./source/js/components/hoverCards.js":
+/*!********************************************!*\
+  !*** ./source/js/components/hoverCards.js ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./source/js/_vars.js");
+/* harmony import */ var _functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/customFunctions */ "./source/js/functions/customFunctions.js");
+
+
+const {
+  mainCards
+} = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
+function mouseHover(items, item) {
+  item.addEventListener('mouseover', function () {
+    items.forEach(function () {
+      if (items[1].classList.contains('active')) {
+        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.toggleCustomClass)(items[1]);
+      }
+    });
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.addCustomClass)(item);
+  });
+  item.addEventListener('mouseout', function () {
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.removeCustomClass)(item);
+    items.forEach(function () {
+      if (!items[1].classList.contains('active')) {
+        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.toggleCustomClass)(items[1]);
+      }
+    });
+  });
+}
+mainCards.forEach(function (card) {
+  mouseHover(mainCards, card);
+});
+
+/***/ }),
+
 /***/ "./source/js/functions/customFunctions.js":
 /*!************************************************!*\
   !*** ./source/js/functions/customFunctions.js ***!
@@ -156,15 +177,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const even = n => !(n % 2);
 // ----------------------------------------------------
-const removeCustomClass = (item, customClass) => {
+const removeCustomClass = function (item) {
+  let customClass = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'active';
   item.classList.remove(customClass);
 };
 // ----------------------------------------------------
-const toggleCustomClass = (item, customClass) => {
+const toggleCustomClass = function (item) {
+  let customClass = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'active';
   item.classList.toggle(customClass);
 };
 // ----------------------------------------------------
-const addCustomClass = (item, customClass) => {
+const addCustomClass = function (item) {
+  let customClass = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'active';
   item.classList.add(customClass);
 };
 // ----------------------------------------------------

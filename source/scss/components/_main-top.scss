@@ -1,0 +1,28 @@
+.main-top{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(12px, 1.868vw, 26px);
+
+    &__title{
+        color: rgba(var(--cl-a),1.0);
+        font-family: var(--font-family);
+        font-size: clamp(22px, 3.305vw, 46px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+        max-width: clamp(191px, 41.307vw, 575px);
+    }
+
+    p{
+        color: rgba(var(--cl-c),1.0);
+        font-family: var(--font-family);
+        font-size: clamp(10px, 1.078vw, 15px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+    }
+
+    .main-button{
+        margin-top: clamp(12px, 1.724vw, 24px);
+    }
+}

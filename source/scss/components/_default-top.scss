@@ -1,0 +1,41 @@
+.default-top{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 12px;
+
+    @include mobile{
+        grid-gap: 14px;
+    }
+
+    p{
+        color: rgba(var(--cl-d),1.0);
+        text-align: center;
+        font-family: var(--font-family);
+        font-size: clamp(12px, 1.078vw, 15px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+    }
+
+    &__title{ 
+        color: rgba(var(--cl-e),1.0);
+        text-align: center;
+        font-family: var(--font-family);
+        font-size: clamp(20px, 2.586vw, 36px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+    }
+
+
+    &--mode{
+
+        p{
+            color: rgba(var(--cl-c),1.0);
+        }
+
+        .default-top__title{
+            color: rgba(var(--cl-a),1.0);
+        }
+    }
+}

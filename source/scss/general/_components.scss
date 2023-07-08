@@ -1,5 +1,8 @@
 // ----------------- MAIN COMPONENTS -----------------
 @import "components/main-nav.scss";
+@import "components/main-top.scss";
+@import "components/main-card.scss";
+@import "components/default-top.scss";
 
 // ----------------- MAIN COMPONENTS -----------------
 
@@ -10,7 +13,7 @@
 // ----------------- BLOCK COMPONENTS -----------------
 
 // ----------------- GRID COMPONENTS -----------------
-
+@import "components/main-list.scss";
 
 
 // ----------------- GRID COMPONENTS -----------------

@@ -1,0 +1,109 @@
+@keyframes leftToRight {
+    0% {
+   
+      background-position: left;
+    }
+  
+    100% {
+  
+      background-position: right;
+    }
+  }
+  
+  .main-button {
+    display: flex;
+  
+    width: 203px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    color: rgba(var(--cl-a),1.0);
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  
+    background-image: linear-gradient(90deg, #1E47B0 0%, #800080 99.74%, #1E47B0 100%);
+    background-size: 300%;
+    background-position: left;
+    transition: all 0.5s;
+    background-repeat: repeat;
+  
+    // animation: leftToRight 5s infinite alternate;
+  
+    &:hover{
+      background-position: right;
+    }
+  }
+
+  .callback{
+    position: absolute;
+    z-index: 20;
+    right: 0;
+    top: 42px;
+    width: clamp(60px, 5.747vw, 80px);
+    height: clamp(60px, 5.747vw, 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(var(--bg-c),1.0);
+    border-radius: 50%;
+    filter: drop-shadow(0px 2px 30px rgba(0, 0, 0, 0.02));
+    transition: all .4s;
+
+    svg{
+        fill: var(--svg-fill-a);
+        transition: all .4s;
+    }
+
+    &:hover{
+        svg{
+            fill: var(--svg-fill-b);
+        }
+    }
+
+    &::before, &::after{
+        position: absolute;
+        content: "";
+        border-radius: 50%;
+        inset: 0;
+        width: clamp(60px, 5.747vw, 80px);
+        height: clamp(60px, 5.747vw, 80px);
+    }
+
+    &::before{
+        z-index: -1;
+        background-color: rgba(var(--bg-c),.4);
+        animation: 1.3s infinite alternate-reverse flashSecond;
+    }
+
+    &::after{
+        z-index: -2;
+        background-color: rgba(var(--bg-c),.3);
+        animation: 1.3s infinite alternate-reverse flash;
+    }
+  }
+
+  @keyframes flash {
+    0% {
+      transform: scale(1);
+    }
+  
+    100% {
+        transform: scale(1.35);
+    }
+  }
+
+  @keyframes flashSecond {
+    0% {
+      transform: scale(1);
+    }
+  
+    100% {
+        transform: scale(1.15);
+    }
+  }
+  

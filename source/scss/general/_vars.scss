@@ -4,7 +4,7 @@
 }
 :root {
 // --------------- default global variable ---------------
-  --body-bg: #081428;
+  --body-bg: #ffffff;
   --body-font-size: 16px;
   --content-width: 1392px;
   --container-offset: 15px;
@@ -24,8 +24,8 @@
 
 
 // --------------- default scroll variable ---------------
-  --scrollbar-thumb: #6866F6;
-  --scrollbar-thumb-hover: #f6866F6ff;
+  --scrollbar-thumb: #1E47B0;
+  --scrollbar-thumb-hover: #1d43a2;
   --scrollbar-track:  #05031d;
   --scrollbar-track-hover: #05031d;
   --overlay-bg: rgba(0, 0, 0, 0.5);
@@ -36,18 +36,17 @@
   --select-focus-border: #FDFDFD;
 
 // --------------- default font-family variable ---------------
-  --font-family2: "Ubuntu" , sans-serif; // var(--font-family);
-  --font-family: "Inter" , sans-serif; // var(--font-family2);
+  --font-family: "Ubuntu" , sans-serif; // var(--font-family);
+  --font-family2: "Inter" , sans-serif; // var(--font-family2);
 // --------------- default text color variable ---------------
   --burger-cl: #{HexToRGB(#00d655)};
 
   --cl-a: #{HexToRGB(#ffffff)}; // rgba(var(--cl-a),1.0);
   --cl-b: #{HexToRGB(#000000)}; // rgba(var(--cl-b),1.0);
+  --cl-c: #{HexToRGB(#FEC200)}; // rgba(var(--cl-c),1.0);
+  --cl-d: #{HexToRGB(#1E47B0)}; // rgba(var(--cl-d),1.0);
+  --cl-e: #{HexToRGB(#333333)}; // rgba(var(--cl-e),1.0);
 
-
-  --cl-c: #{HexToRGB(#030514)}; // rgba(var(--cl-c),1.0);
-  --cl-d: #{HexToRGB(#1B2E5E)}; // rgba(var(--cl-d),1.0);
-  --cl-e: #{HexToRGB(#6866F6)}; // rgba(var(--cl-e),1.0);
   --cl-f: #{HexToRGB(#ABB8EB)}; // rgba(var(--cl-f),1.0);
   --cl-g: #{HexToRGB(#050E1D)}; // rgba(var(--cl-g),1.0);
   --cl-h: #{HexToRGB(#081428)}; // rgba(var(--cl-h),1.0);
@@ -120,30 +119,9 @@
 // --------------- gradient background cl variable ---------------
 
   --gradient-a: linear-gradient(180deg, rgba(104, 102, 246, 0) 0%, rgba(104, 102, 246, 0.1) 100%);
-  --gradient-b: linear-gradient(180deg, #6866F6 0%, rgba(104, 102, 246, 0) 100%);
-  --gradient-c: linear-gradient(207.09deg, #6866F6 7.82%, rgba(104, 102, 246, 0) 83.08%);
-  --gradient-d: linear-gradient(0deg, rgba(104, 102, 246, 0) 0%, rgba(104, 102, 246, 0.1) 100%);
-  --gradient-e: linear-gradient(207.09deg, #6866F6 7.82%, rgba(104, 102, 246, 0) 83.08%);
-
-  --gradient-f: linear-gradient(270deg, rgba(104, 102, 246, 0) 0%, rgba(104, 102, 246, 0.45) 100%);
-  --gradient-g: linear-gradient(270deg, rgba(38, 241, 114, 0) 0%, rgba(38, 241, 114, 0.43) 100%);
-  --gradient-h: linear-gradient(270deg, rgba(104, 102, 246, 0) 0%, #FB6939 190%);
-  --gradient-i: linear-gradient(261.67deg, #6866F6 14.16%, rgba(104, 102, 246, 0) 94.97%);
-  
-  
 
 
-
-
-
-
-// --------------- icon background cl variable ---------------
-
-  --icon-a: rgb(104, 102, 246); // var(--icon-a);
-  --icon-b: rgb(231, 65, 66); // var(--icon-b);
-  --icon-c: rgb(45, 216, 74); // var(--icon-c);
-  --icon-d: rgb(185, 139, 242); // var(--icon-d);
-  --icon-e: rgb(242, 184, 72); // var(--icon-e);
-  --icon-f: rgb(34, 158, 120); // var(--icon-f);
-  --icon-g: rgba(240, 185, 11, 0.11); // var(--icon-g);
+// --------------- svg fill cl variable ---------------
+--svg-fill-a: #ffffff; // var(--svg-fill-a);
+--svg-fill-b: #FEC200; // var(--svg-fill-b);
 }

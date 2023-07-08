@@ -10,6 +10,7 @@ import './components/getDinamicHeight';
 // import './components/accordions';
 // import './components/range';
 // import './components/anchor';
+import './components/hoverCards';
 
 
 

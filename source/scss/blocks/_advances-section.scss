@@ -1,0 +1,10 @@
+.advances-section{
+    margin-bottom: clamp(50px, 6.753vw, 94px);
+
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(56px, 7.184vw, 100px);
+    }
+}
