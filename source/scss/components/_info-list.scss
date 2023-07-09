@@ -3,7 +3,16 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
 
+    @include tablet{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include small-tablet{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     @include mobile{
+        grid-template-columns: 1fr;
         grid-gap: 16px;
     }
 

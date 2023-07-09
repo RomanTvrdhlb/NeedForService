@@ -27,6 +27,24 @@
         align-items: center;
         grid-gap: clamp(33px, 3.592vw, 50px);
         padding-top: clamp(10px, 1.437vw, 20px);  
+
+        @include mobile{
+            padding-top: 0;
+        }
+
+        @media (max-width: (450px)) {
+            display: grid;
+            justify-items: center;
+        
+            .animation-text{
+                justify-self: flex-start;
+                br{
+                    display: block;
+                }
+            }
+          }
+
+        
     }
 
     .default-top{

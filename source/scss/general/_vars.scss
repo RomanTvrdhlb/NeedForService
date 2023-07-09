@@ -47,10 +47,10 @@
   --cl-d: #{HexToRGB(#1E47B0)}; // rgba(var(--cl-d),1.0);
   --cl-e: #{HexToRGB(#333333)}; // rgba(var(--cl-e),1.0);
   --cl-f: #{HexToRGB(#275efe)}; // rgba(var(--cl-f),1.0);
+  --cl-g: #{HexToRGB(#1D252D)}; // rgba(var(--cl-g),1.0);
+  --cl-h: #{HexToRGB(#BBBBBB)}; // rgba(var(--cl-h),1.0);
 
 
-  --cl-g: #{HexToRGB(#050E1D)}; // rgba(var(--cl-g),1.0);
-  --cl-h: #{HexToRGB(#081428)}; // rgba(var(--cl-h),1.0);
   --cl-i: #{HexToRGB(#66F6A8)}; // rgba(var(--cl-i),1.0);
   --cl-j: #{HexToRGB(#BAC9F0)}; // rgba(var(--cl-j),1.0);
   --cl-k: #{HexToRGB(#2284f3)}; // rgba(var(--cl-k),1.0);
@@ -95,20 +95,11 @@
   --bg-z: #{HexToRGB( #030C1B)}; // rgba(var(--bg-z),1.0);
 
 
-// ---------------default background modal variable-----------
-
---bm-a: #{HexToRGB(#253A75)}; // rgba(var(--bm-a),1.0);
---bm-b: #{HexToRGB(#6966f600)}; // rgba(var(--bm-b),1.0);
---bm-c: #{HexToRGB(#08142800)}; // rgba(var(--bm-c),1.0);
---bm-d: #{HexToRGB(#1D2744)}; // rgba(var(--bm-d),1.0);
---bm-e: #{HexToRGB(#0C1525)}; // rgba(var(--bm-e),1.0);
---bm-f: #{HexToRGB(#0D1626)}; // rgba(var(--bm-f),1.0);
---bm-g: #{HexToRGB(#F0B90B)}; // rgba(var(--bm-g),1.0);
---bm-h: #{HexToRGB(#f0bb0b)}; // rgba(var(--bm-h),1.0);
-
 // --------------- default border cl variable ---------------
-  --br-a: #d9d9d9; // var(--br-a);
-  --br-b: #cecece; // var(--br-b);
+  --br-a: #C5C5C5; // var(--br-a);
+  --br-b: #1E47B0; // var(--br-b);
+
+
   --br-c: #6866F6; // var(--br-c);
   --br-d: #212B62; // var(--br-d);
   --br-e: #293874; // var(--br-e);
@@ -126,4 +117,6 @@
 --svg-fill-a: #ffffff; // var(--svg-fill-a);
 --svg-fill-b: #FEC200; // var(--svg-fill-b);
 --svg-fill-c: #2D74FF; // var(--svg-fill-c);
+--svg-fill-d: #C4C4C4; // var(--svg-fill-d);
+--svg-fill-e: #1D252D; // var(--svg-fill-e);
 }

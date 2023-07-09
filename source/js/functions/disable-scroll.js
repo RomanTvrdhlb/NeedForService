@@ -1,5 +1,5 @@
 import vars from '../_vars';
-const {bodyEl,htmlEl} = vars;
+const {bodyEl,htmlEl,header} = vars;
 
 export const disableScroll = () => {
   const fixBlocks = document?.querySelectorAll('.fixed-block');

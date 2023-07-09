@@ -3,16 +3,16 @@
 @import "components/main-top.scss";
 @import "components/main-card.scss";
 @import "components/default-top.scss";
-@import "components/advances-card.scss";
-@import "components/info-card.scss";
 @import "components/main-pay.scss";
 @import "components/main-contact.scss";
+@import "components/modal-form.scss";
 
 // ----------------- MAIN COMPONENTS -----------------
 
 // ----------------- BLOCK COMPONENTS -----------------
-
-
+@import "components/modal.scss";
+@import "components/advances-card.scss";
+@import "components/info-card.scss";
 
 // ----------------- BLOCK COMPONENTS -----------------
 

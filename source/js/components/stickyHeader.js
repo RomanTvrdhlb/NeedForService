@@ -6,6 +6,7 @@ let lastScroll = 0;
 const defaultOffset = 40;
 
 
+
 function stickyHeaderFunction(breakpoint){
   let containerWidth = document.documentElement.clientWidth;
   if (containerWidth > `${breakpoint}`) {
@@ -25,9 +26,11 @@ function stickyHeaderFunction(breakpoint){
   }
 }
 
-window.addEventListener('resize', () => {
-  stickyHeaderFunction(1024)
-});
-window.addEventListener('DOMContentLoaded', () => {
-  stickyHeaderFunction(1024)
-});
+stickyHeaderFunction(320);
+
+// window.addEventListener('resize', () => {
+//   stickyHeaderFunction(1024)
+// });
+// window.addEventListener('DOMContentLoaded', () => {
+//   stickyHeaderFunction(1024)
+// });

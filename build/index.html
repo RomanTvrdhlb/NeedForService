@@ -61,7 +61,7 @@
 </nav>
 
 
-            <button class="main-button">Забронювати візит</button>
+            <button data-btn-modal="callback" class="main-button">Забронювати візит</button>
 
             <button class="burger">
               <svg width="18" height="10">
@@ -229,7 +229,7 @@
             <p>МИ ЗНАЄМО ВСЕ ПРО ВАШЕ АВТО</p>
             <h1 class="main-top__title">Наша лояльність не знає
               меж, але має кордони</h1>
-            <button class="main-button">Забронювати візит</button>
+            <button class="main-button" data-btn-modal="callback">Забронювати візит</button>
           </div>
 
           <ul class="main-list">
@@ -480,11 +480,11 @@
           </ul>
 
           <div class="info-section__inner">
-            <p class="animation-text">Сплануйте Ваш візит зазделегідь - це <a href="#"
+            <p class="animation-text">Сплануйте Ваш візит зазделегідь -<br> це <a href="#"
                 class="animation-text__link">зекономить <svg>
                   <use href='img/sprite/sprite.svg#icon1'></use>
                 </svg></a> Ваш час</p>
-            <button class="main-button">Забронювати візит</button>
+            <button class="main-button" data-btn-modal="callback">Забронювати візит</button>
           </div>
         </div>
       </div>
@@ -512,6 +512,8 @@
 
           <div class="pay-section__picture">
             <picture>
+              <source type='image/webp' media='(max-width: 768px)' srcset='img/index/carmob2.webp'>
+              <source media='(max-width: 768px)' srcset='img/index/carmob2.png'>
               <source type='image/webp' srcset='img/index/car2.webp'>
               <img width='1057' height='576' src='img/index/car2.png' alt='image'>
             </picture>
@@ -545,7 +547,7 @@
 
               <div class="default-top__inner">
                 <p>Маєте питання напишіть нам будемо раді допомогти</p>
-                <button class="main-button">Забронювати візит</button>
+                <button class="main-button" data-btn-modal="callback">Забронювати візит</button>
               </div>
             </div>
             <ul class="main-contact">
@@ -562,7 +564,7 @@
                 </div>
               </li>
               <li class="main-contact__item">
-                <span class="main-contact__icon">
+                <span class="main-contact__icon main-contact__icon--mode">
                   <svg width='60' height='60'>
                     <use href='img/sprite/sprite.svg#phone2'></use>
                   </svg>
@@ -610,171 +612,43 @@
   </div>
 </footer>
 
-  <div class="overlay none" data-overlay>
-  <!-- <div class="modal modal-connect" data-popup="connect">
-    <div class="modal__box modal-connect__box" role="dialog" aria-modal="true">
+  <div class="overlay" data-overlay>
+
+  <div class="modal" data-popup="callback">
+    <div class="modal__box" role="dialog" aria-modal="true">
       <button class="close modal__close" aria-label="Закрыть модальное окно">
-        <svg width='21' height='21'>
+        <svg width='18' height='18'>
           <use href='img/sprite/sprite.svg#close'></use>
         </svg>
       </button>
 
-      <div class="modal__top modal-connect__top">
-        <h2 class="modal__title modal-connect__title">
-          Connect to wallet
+        <h2 class="modal__title">
+          Зворотній зв’язок
         </h2>
-        <p>By connecting a wallet, you agree to Fixswap's <a href="#" class="transparent-text">Terms of Use</a></p>
-      </div>
+        <form action="#" class="modal-form">
+          <label for="user" class="modal-form__label">
+            <input type="text" class="modal-form__input" id="user" placeholder="Ваше ім’я">
+          </label>
+          <label for="phone" class="modal-form__label">
+            <input type="number" class="modal-form__input" id="phone" placeholder="Номер телефону">
+          </label>
 
-      <ul class="connect-list">
-        <li class="connect-list__item">
-          <button class="connect-list__btn" data-btn-modal="back">
-            <img src="/img/connect/img1.svg" alt="image" width="30" height="30">
-            Metamask
-          </button>
-        </li>
-        <li class="connect-list__item">
-          <button class="connect-list__btn" data-btn-modal="back">
-            <img src="/img/connect/img2.svg" alt="image" width="30" height="30">
-            TrustWallet
-          </button>
-        </li>
-        <li class="connect-list__item">
-          <button class="connect-list__btn" data-btn-modal="back">
-            <img src="/img/connect/img3.svg" alt="image" width="30" height="30">
-            WalletConnect
-          </button>
-        </li>
-        <li class="connect-list__item">
-          <button class="connect-list__btn" data-btn-modal="back">
-            <img src="/img/connect/img4.svg" alt="image" width="30" height="30">
-            Brave Wallet
-          </button>
-        </li>
-        <li class="connect-list__item">
-          <button class="connect-list__btn" data-btn-modal="back">
-            <img src="/img/connect/img5.svg" alt="image" width="30" height="30">
-            TokenPocket
-          </button>
-        </li>
-        <li class="connect-list__item">
-          <button class="connect-list__btn" data-btn-modal="back">
-            <img src="/img/connect/img6.svg" alt="image" width="30" height="30">
-            MathWallet
-          </button>
-        </li>
-        <li class="connect-list__item">
-          <button class="connect-list__btn" data-btn-modal="back">
-            <img src="/img/connect/img7.svg" alt="image" width="30" height="30">
-            Coin98
-          </button>
-        </li>
-        <li class="connect-list__item">
-          <button class="connect-list__btn" data-btn-modal="back">
-            <img src="/img/connect/img8.svg" alt="image" width="30" height="30">
-            Binance Chain
-          </button>
-        </li>
-        <li class="connect-list__item">
-          <button class="connect-list__btn" data-btn-modal="back">
-            <img src="/img/connect/img9.svg" alt="image" width="30" height="30">
-            Coinbase Wallet
-          </button>
-        </li>
-      </ul>
+          <div class="modal-form__bottom">
+            <button type="submit" class="main-button">Відправити</button>
+            <p>Натискаючи кнопку Відправити, я даю згоду 
+              на обрабку персональних даних</p>
+          </div>
+        </form>
+
+     
+    
+    
+
+     
     </div>
   </div>
-
-  <div class="modal modal-wallet" data-popup="wallet">
-    <div class="modal__box modal-wallet__box" role="dialog" aria-modal="true">
-      <button class="close modal__close" aria-label="Закрыть модальное окно">
-        <svg width='21' height='21'>
-          <use href='img/sprite/sprite.svg#close'></use>
-        </svg>
-      </button>
-
-      <div class="modal__top modal-wallet__top">
-        <h2 class="modal__title modal-wallet__title">
-          You wallet
-        </h2>
-      </div>
-
-      <div class="modal-wallet__inner">
-        <span class="modal-wallet__result">
-          <b class="green-text">Connected</b></span>
-        <span class="modal-wallet__value">0x04cc33A71667fB92F25b14ca8bD21aA1907BB233</span>
-        <div class="modal-wallet__content">
-          <a href="#" class="vertical-card__acc-link">
-            Copy adress
-            <svg width="17" height="17">
-              <use href="img/sprite/sprite.svg#arrow-link"></use>
-            </svg>
-          </a>
-          <a href="#" class="vertical-card__acc-link">
-            View on BscScan
-            <svg width="17" height="17">
-              <use href="img/sprite/sprite.svg#arrow-link"></use>
-            </svg>
-          </a>
-        </div>
-
-
-      </div>
-
-      <button class="modal-wallet__btn">
-        Logout
-        <svg width='24' height='24'>
-          <use href='img/sprite/sprite.svg#main-arrow'></use>
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <div class="modal modal-farming" data-popup="farming">
-    <div class="modal__box modal-farming__box" role="dialog" aria-modal="true">
-      <button class="close modal__close" aria-label="Закрыть модальное окно">
-        <svg width='21' height='21'>
-          <use href='img/sprite/sprite.svg#close'></use>
-        </svg>
-      </button>
-
-      <div class="modal__top modal-farming__top">
-        <h2 class="modal__title modal-farming__title">
-          Unstake LP Tokens
-        </h2>
-      </div>
-
-      <div class="modal-farming__inner">
-        <ul class="modal-farming__list">
-          <li class="modal-farming__item">
-            <span class="modal-farming__name">Unstake</span>
-            <span class="modal-farming__name">Balance:0.255894545</span>
-          </li>
-          <li class="modal-farming__item">
-            <span class="modal-farming__value">0</span>
-            <span class="modal-farming__name">BNB-BUSDT
-              <button class="modal-farming__max">Max</button>
-            </span>
-          </li>
-        </ul>
-
-        <div class="modal-farming__content">
-          <button class="modal-farming__btn--mode modal-farming__btn">Cancel</button>
-          <button class="modal-farming__btn">
-            Confirm
-            <svg width='24' height='24'>
-              <use href='img/sprite/sprite.svg#main-arrow'></use>
-            </svg>
-          </button>
-        </div>
-
-      </div>
-
-    </div>
-  </div> -->
 
 </div>
-
 </body>
 <script src="js/main.js"></script>
 

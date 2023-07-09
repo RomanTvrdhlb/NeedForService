@@ -12,6 +12,14 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 5;
+
+        @include small-tablet{
+            top: 42%;
+        }
+
+        @include mobile{
+            width: 100%;
+        }
     }
 
     &__picture{
@@ -32,5 +40,13 @@
         display: flex;
         flex-direction: column;
         grid-gap:  clamp(39px, 14.44vw, 201px);
+
+        @include tablet{
+            grid-gap: clamp(39px, 11.207vw, 125px);
+        }
+
+        @include small-tablet{
+            grid-gap: 39px;
+        }
     }
 }

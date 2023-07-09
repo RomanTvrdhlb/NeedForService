@@ -221,6 +221,10 @@ input[type="number"] {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 var(--container-offset);
+
+  @include mobile{
+    padding: 0 calc(var(--container-offset) - 5px);
+  }
 }
 
 .panel,
@@ -342,12 +346,25 @@ fieldset {
 
   &__close {
     position: absolute;
-    right: 12px;
-    top: 12px;
+    right: 19px;
+    top: 20px;
     z-index: 20;
+
+  
+
   }
 
-  .close svg {
+  .close{
+   svg {
     pointer-events: none;
+    stroke: var(--svg-fill-d);
+    transition: all .4s;
+   }  
+   &:hover{
+    svg{
+      stroke: var(--svg-fill-e);
+    }
+}
+   
   }
 }

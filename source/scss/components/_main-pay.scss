@@ -4,6 +4,9 @@
     align-items: flex-start;
     grid-gap: 12px;
 
+    @include small-tablet{
+        align-items: center;
+    }
 
     @include mobile{
         grid-gap: 14px;
@@ -39,8 +42,14 @@
         padding-top: 8px;   
         max-width: 336px;
 
+        @include small-tablet{
+            text-align: center;
+        }
         @include mobile{
             padding-top: 14px;
+        }
+        @include ios{
+            max-width: 100%;
         }
     }
 
@@ -49,5 +58,10 @@
         align-items: center;
         grid-gap: 44px;
         padding-top: clamp(6px, 1.437vw, 20px);
+
+        @include ios{
+            width: 100%;
+            justify-content: flex-start;
+        }
     }
 }

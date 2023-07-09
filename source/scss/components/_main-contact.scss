@@ -3,22 +3,47 @@
     border-radius: 8px;
     background: rgba(var(--bg-a),1.0);
     padding: clamp(25px, 2.874vw, 40px) clamp(20px, 3.592vw, 50px);
-    max-width: 768px;
+    width: 768px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    grid-gap: 34px;
+    grid-gap:34px 50px;
+
+    @include desktop{
+        width: 100%;
+    }
+
+    @include mobile{
+        flex-direction: column;
+    }
 
     &__item{
         display: flex;
         align-items: center;
         grid-gap: clamp(18px, 2.155vw, 30px);
+
+        @include mobile{
+            justify-content: flex-start;
+            width: 100%;
+        }
     }
 
     &__inner{
         display: flex;
         flex-direction: column;
         grid-gap: 8px;
+
+        @include mobile{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            grid-gap: 15px;
+        }
+
+        @include ios{
+            grid-template-columns: 1fr;
+        }
     }
 
     &__title{
@@ -28,6 +53,14 @@
         font-style: normal;
         font-weight: 500;
         line-height: 130%;
+
+        @include mobile{
+            grid-column: span 2;
+        }
+
+        @include ios{
+            grid-column: initial;
+        }
     }
 
     &__time{
@@ -37,6 +70,11 @@
         font-style: normal;
         font-weight: 400;
         line-height: 130%;
+        white-space: nowrap;
+
+        @include mobile{
+            line-height: 100%;
+        }
     }
 
     &__link{
@@ -50,6 +88,11 @@
         text-underline-offset: 4px;
         text-decoration-color: transparent;
         transition: all .4s;
+        white-space: nowrap;
+
+        @include mobile{
+            line-height: 100%;
+        }
 
         &:hover{
             text-decoration-color: rgba(var(--cl-d),1.0); 
@@ -60,6 +103,18 @@
     &__icon{
         svg{
             fill: transparent;
+        }
+
+        &--mode{
+
+            @include mobile{
+                display: flex;
+                align-items: center;
+                svg{
+                width: 50px;
+                height: 50px;
+            }
+        }
         }
     }
 }

@@ -1,7 +1,7 @@
 .advances-card{
     display: flex;
     grid-gap: 22px;
-    padding: 0 20px 41px 40px;
+    padding: 0 clamp(10px, 1.953vw, 20px) clamp(25px, 4.004vw, 41px) clamp(20px, 3.906vw, 40px);
     height: clamp(136px, 13.937vw, 194px);
     border-radius: 6px;
     background: rgba(var(--bg-b),1.0);
@@ -26,6 +26,10 @@
         line-height: 150%;
         flex-shrink: 0;
         max-width: 222px;
+
+        @include laptop{
+            flex-shrink: 1;
+        }
     }
 
     &__number{
@@ -36,7 +40,7 @@
         color: rgba(var(--cl-a),.10);
         text-align: center;
         font-family: var(--font-family);
-        font-size: 100px;
+        font-size: clamp(50px, 9.766vw, 100px);
         font-style: normal;
         font-weight: 700;
         line-height: 130%;

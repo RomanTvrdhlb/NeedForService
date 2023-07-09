@@ -22,7 +22,7 @@
             <p>МИ ЗНАЄМО ВСЕ ПРО ВАШЕ АВТО</p>
             <h1 class="main-top__title">Наша лояльність не знає
               меж, але має кордони</h1>
-            <button class="main-button">Забронювати візит</button>
+            <button class="main-button" data-btn-modal="callback">Забронювати візит</button>
           </div>
 
           <ul class="main-list">
@@ -273,11 +273,11 @@
           </ul>
 
           <div class="info-section__inner">
-            <p class="animation-text">Сплануйте Ваш візит зазделегідь - це <a href="#"
+            <p class="animation-text">Сплануйте Ваш візит зазделегідь -<br> це <a href="#"
                 class="animation-text__link">зекономить <svg>
                   <use href='img/sprite/sprite.svg#icon1'></use>
                 </svg></a> Ваш час</p>
-            <button class="main-button">Забронювати візит</button>
+            <button class="main-button" data-btn-modal="callback">Забронювати візит</button>
           </div>
         </div>
       </div>
@@ -305,6 +305,8 @@
 
           <div class="pay-section__picture">
             <picture>
+              <source type='image/webp' media='(max-width: 768px)' srcset='img/index/carmob2.webp'>
+              <source media='(max-width: 768px)' srcset='img/index/carmob2.png'>
               <source type='image/webp' srcset='img/index/car2.webp'>
               <img width='1057' height='576' src='img/index/car2.png' alt='image'>
             </picture>
@@ -338,7 +340,7 @@
 
               <div class="default-top__inner">
                 <p>Маєте питання напишіть нам будемо раді допомогти</p>
-                <button class="main-button">Забронювати візит</button>
+                <button class="main-button" data-btn-modal="callback">Забронювати візит</button>
               </div>
             </div>
             <ul class="main-contact">
@@ -355,7 +357,7 @@
                 </div>
               </li>
               <li class="main-contact__item">
-                <span class="main-contact__icon">
+                <span class="main-contact__icon main-contact__icon--mode">
                   <svg width='60' height='60'>
                     <use href='img/sprite/sprite.svg#phone2'></use>
                   </svg>
