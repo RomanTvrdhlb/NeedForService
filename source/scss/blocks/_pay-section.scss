@@ -1,47 +1,44 @@
-.pay-section{
-    
-    &__box{
+.pay-section {
+  &__box {
     padding: clamp(41px, 11.279vw, 157px) 0 clamp(51px, 11.997vw, 167px);
-  
-     display: flex;
-     position: relative;
 
-     @include small-tablet{
-        flex-direction: column;
-        align-items: center;
-        
-        padding: clamp(41px, 11.279vw, 157px) 0 0;
-     }
+    display: flex;
+    position: relative;
 
-     @include mobile{
-        grid-gap: 10px;
-     }
+    @include small-tablet {
+      flex-direction: column;
+      align-items: center;
+
+      padding: clamp(41px, 11.279vw, 157px) 0 0;
     }
 
-    &__picture{
-        position: absolute;
-        right: 0;
-        bottom: -3px;
-        z-index: -1;
-
-        @include laptop{
-            width: 800px;
-        }
-
-        @include tablet{
-            width: clamp(550px, 68.359vw, 700px);
-        }
-
-        @include small-tablet{
-            width: 500px;
-            position: relative;
-            bottom: -12px;
-        }
-
-        @include mobile{
-            width: 100%;
-        }
-
-    
+    @include mobile {
+      grid-gap: 10px;
     }
+  }
+
+  &__picture {
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    z-index: -1;
+
+    @include laptop {
+      width: 800px;
+    }
+
+    @include tablet {
+      width: clamp(550px, 68.359vw, 700px);
+    }
+
+    @include small-tablet {
+      width: 500px;
+      position: relative;
+      bottom: -12px;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
 }

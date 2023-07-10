@@ -1,0 +1,8 @@
+.services-section{    
+    @include small-tablet{
+        margin-top: clamp(20px, 6.466vw, 90px);
+   }
+    .main-list{
+        margin-top: calc(clamp(70px, 5.747vw, 80px) * -1);
+    }
+}

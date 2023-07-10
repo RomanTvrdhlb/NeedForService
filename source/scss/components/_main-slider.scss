@@ -3,9 +3,19 @@
         display: none
     }
     width: 100%;
+
+    @include small-tablet{
+        width: calc(100% + (var(--container-offset) * 2));
+        margin-left: calc(var(--container-offset) * -1);
+     
+    }
     &__container{
         border-radius: 6px;
         overflow: hidden;
+
+        @include small-tablet{
+            padding: 0 var(--container-offset);
+        }
     }
 
     &__slide{
@@ -44,13 +54,6 @@
             opacity: 1;
         }
 
-        &__image{
-            width: 100%;
-            img,picture{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
+        
     }
 }

@@ -8,8 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NFS</title>
 
-    <link rel="preload" href="fonts/Inter-Regular.woff" as="font" crossorigin="anonymous">
-
     <link rel="preload" href="fonts/Ubuntu-Regular.woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Ubuntu-Medium.woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Ubuntu-Bold.woff" as="font" crossorigin="anonymous">
@@ -19,7 +17,7 @@
 
 
 <body>
-  <header class="header">
+  <header class="header fixed-block">
 
     <div class="container">
       <div class="header-box">
@@ -38,22 +36,22 @@
 <nav class="main-nav header-box__nav">
   <ul class="main-nav__list">
     <li class="main-nav__item">
-      <a href="#" class="main-nav__link active">
+      <a href="#advances" class="main-nav__link">
         Наші переваги
       </a>
     </li>
     <li class="main-nav__item">
-      <a href="#" class="main-nav__link">
+      <a href="#info" class="main-nav__link">
         Види робіт
       </a>
     </li>
     <li class="main-nav__item">
-      <a href="#" class="main-nav__link">
+      <a href="#pay" class="main-nav__link">
         Оплата
       </a>
     </li>
     <li class="main-nav__item">
-      <a href="#" class="main-nav__link">
+      <a href="#contact" class="main-nav__link">
         Контакти
       </a>
     </li>
@@ -68,60 +66,10 @@
               </svg>
             </button>
             <button class="burger">
-              <svg width='22' height='14'>
-                <use href='img/sprite/sprite.svg#burger'></use>
-              </svg>
+             <span class="burger__line"></span>
             </button>
       </div>
     </div>
-
-
-
-  <div class="mobile-menu">
-    <div class="mobile-menu__top">
-      
-
-
-<a href="index.html" class="header-logo header__logo">
-  <svg width='132' height='47'>
-    <use href='img/sprite/sprite.svg#logo'></use>
-  </svg>
-</a>
-
-      <button class="burger">
-        <svg width='22' height='14'>
-          <use href='img/sprite/sprite.svg#close'></use>
-        </svg>
-      </button>
-    </div>
-
-    <nav class="main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a href="#advances" class="main-nav__link active">
-            Наші переваги
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#info" class="main-nav__link">
-            Види робіт
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#pay" class="main-nav__link">
-            Оплата
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#contact" class="main-nav__link">
-            Контакти
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-  </div>
-
 </header>
 
 
@@ -154,7 +102,13 @@
               меж, але має кордони</h1>
             <button class="main-button" data-btn-modal="callback">Забронювати візит</button>
           </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="services-section">
+      <div class="container">
+        <div class="services-section__box">
           <ul class="main-list">
             <li class="main-list__item">
               <a href="#" class="main-card">
@@ -197,13 +151,6 @@
               </a>
             </li>
           </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="advances-section section-observe" id="advances">
-      <div class="container">
-        <div class="advances-section__box">
           <div class='main-slider'>
             <div class='main-slider__container swiper-container'>
               <ul class='main-slider__wrapper swiper-wrapper'>
@@ -234,8 +181,8 @@
                   <a href="#" class="main-card">
                     <div class="main-card__image">
                       <picture>
-                        <source type='image/webp' srcset='img/index/img1.webp'>
-                        <img width='464' height='300' src='img/index/img1.png' alt='image'>
+                        <source type='image/webp' srcset='img/index/img2.webp'>
+                        <img width='464' height='300' src='img/index/img2.png' alt='image'>
                       </picture>
                     </div>
                     <span class="main-card__title">Професійний підбір та своєчасна поставка високоякісних автозапчастин
@@ -246,6 +193,14 @@
             </div>
             <span class='main-slider__pagination'></span>
           </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="advances-section section-observe" id="advances">
+      <div class="container">
+        <div class="advances-section__box">
           <div class="default-top">
             <p>ТРОХИ ПРО НАС</p>
             <h1 class="default-top__title">Наші переваги</h1>

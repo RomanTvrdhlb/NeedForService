@@ -1,52 +1,53 @@
-.contact-section{
-    position: relative;
-    
-    &__wrapper{
-        display: flex;
-        flex-direction: column;
+.contact-section {
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__box {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+
+    @include small-tablet {
+      top: 42%;
     }
 
-    &__box{
-        position: absolute;
-        top: 46%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 5;
+    @include mobile {
+      width: 100%;
+    }
+  }
 
-        @include small-tablet{
-            top: 42%;
-        }
+  &__picture {
+    height: clamp(348px, 56.178vw, 782px);
 
-        @include mobile{
-            width: 100%;
-        }
+    img,
+    picture {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__map {
+    height: clamp(300px, 32.615vw, 454px);
+    width: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(39px, 14.44vw, 201px);
+
+    @include tablet {
+      grid-gap: clamp(39px, 11.207vw, 125px);
     }
 
-    &__picture{
-        height: clamp(348px, 56.178vw, 782px);
-
-        img,picture{
-            height: 100%;
-            width: 100%;
-        }
+    @include small-tablet {
+      grid-gap: 39px;
     }
-
-    &__map{
-        height: clamp(300px, 32.615vw, 454px);
-        width: 100%;
-    }
-
-    &__inner{
-        display: flex;
-        flex-direction: column;
-        grid-gap:  clamp(39px, 14.44vw, 201px);
-
-        @include tablet{
-            grid-gap: clamp(39px, 11.207vw, 125px);
-        }
-
-        @include small-tablet{
-            grid-gap: 39px;
-        }
-    }
+  }
 }

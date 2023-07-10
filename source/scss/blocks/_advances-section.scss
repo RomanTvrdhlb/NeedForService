@@ -1,16 +1,10 @@
 .advances-section{
     margin-bottom: clamp(50px, 6.753vw, 94px);
-
+    padding-top: clamp(20px, 6.466vw, 90px);
 
     &__box{
         display: flex;
         flex-direction: column;
-        grid-gap: clamp(50px, 7.184vw, 100px);
-    }
-
-    .default-top{
-        @include small-tablet{
-            padding-bottom: 6px;
-        }
+        grid-gap: clamp(56px, 7.184vw, 100px);
     }
 }

@@ -1,117 +1,85 @@
 /* stylelint-disable */
 
-// @mixin burger {
-//   --burger-width: 22px;
-//   --burger-height: 14px;
-//   --burger-line-height: 3px;
-//   --border-radius: 3px;
+@mixin burger {
+  --burger-width: 22px;
+  --burger-height: 14px;
+  --burger-line-height: 2px;
+  --border-radius: 0;
 
-//   position: relative;
-//   border: none;
-//   padding: 0;
-//   width: var(--burger-width);
-//   height: var(--burger-height);
-//   color: rgba(var(--burger-color),1.0);
-//   background-color: transparent;
-//   flex-shrink: 0;
-//   cursor: pointer;
+  position: relative;
+  border: none;
+  padding: 0;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: rgba(var(--bg-a),1.0);
+  background-color: transparent;
+  flex-shrink: 0;
+  cursor: pointer;
 
-//   &::before,
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     left: 0;
-//     width: 100%;
-//     height: var(--burger-line-height);
-//     background-color: currentColor;
-//     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-//     border-radius: var(--border-radius);
-//   }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    border-radius: var(--border-radius);
+    transform: skew(-45deg);
+  }
 
-//   &::before {
-//     top: 0;
-//   }
+  &::before {
+    top: 0;
+  }
 
-//   &::after {
-//     top: calc(100% - var(--burger-line-height));
-//   }
+  &::after {
+    top: calc(100% - var(--burger-line-height));
+  }
 
-//   &__line {
-//     position: absolute;
-//     left: 0;
-//     top: 50%;
-//     width: 100%;
-//     height: var(--burger-line-height);
-//     background-color: currentColor;
-//     transform: translateY(-50%);
-//     transition: transform 0.3s ease-in-out;
-//     border-radius: var(--border-radius);
-//   }
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transform: translateY(-50%) skew(-45deg);
+    transition: transform 0.3s ease-in-out;
+    border-radius: var(--border-radius);
+  }
 
-//   &.active {
-//     &::before {
-//       top: 50%;
-//       transform: rotate(45deg);
-//       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-//     }
+  &.active {
+    &::before {
+      top: 50%;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
 
-//     &::after {
-//       top: 50%;
-//       transform: rotate(-45deg);
-//       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-//     }
+    &::after {
+      top: 50%;
+      transform: rotate(-45deg);
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
 
-//     .burger__line {
-//       transform: scale(0);
-//       transition: transform 0.3s ease-in-out;
-//     }
-//   }
-// }
+    .burger__line {
+      transform: scale(0);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  &:hover{
+    color: rgba(var(--bg-f),1.0);
+  }
+}
 
 .burger {
   display: none;
 
   @include tablet {
     display: flex;
-    order: 3; 
+    order: 3;
+    @include burger;
     position: relative;
-
-    svg{
-      fill: var(--svg-fill-a);
-      transition: all .4s;
-    }
-
-    &::before{
-      position: absolute;
-      content: '';
-      inset: 0;
-      background-image: url(/img/sprite/close2.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      opacity: 0;
-      visibility: hidden;
-      transition: all .4s;
-    }
-
-
-    &:hover{
-      svg{
-        fill: var(--svg-fill-f);
-      }
-    }
-
-    &.active{
-
-      svg{
-        opacity: 0;
-        visibility: hidden;
-      }
-
-      &::before{
-        opacity: 1;
-        visibility: visible;
-      }
-    }
   }
 }

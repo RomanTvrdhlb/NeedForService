@@ -7,52 +7,50 @@ import {
   toggleCustomClass,
   removeCustomClass,
   removeClassInArray,
+  addClassInArray,
 } from "../functions/customFunctions";
-const { overlay, burger, mobileMenu, mainLinks, mobileBurger, bodyEl, callBtn } = vars;
+const { overlay, burger, mobileMenu, mainLinks, bodyEl, callBtn, activeMode } =
+  vars;
 
 const mobileMenuHandler = function (overlay, mobileMenu, btn) {
   btn.addEventListener("click", function () {
-   
     toggleCustomClass(burger, "active");
     toggleCustomClass(mobileMenu, "active");
-    toggleCustomClass(overlay, "active");
+    toggleCustomClass(overlay, activeMode);
 
     if (!bodyEl.classList.contains("dis-scroll")) {
       disableScroll();
     } else {
-      enableScroll();
+      enableScroll('');
     }
   });
-
-
 };
 
 const hideMenuHandler = function (overlay, mobileMenu, burger) {
   removeCustomClass(mobileMenu, "active");
   removeCustomClass(burger, "active");
-  removeCustomClass(mobileBurger, "active");
-  removeCustomClass(overlay, "active");
-  enableScroll();
+  removeCustomClass(overlay, activeMode);
+  // enableScroll('');
 };
 
-if (burger) {
-  mainLinks.map(function (item) {
-    item.addEventListener("click", function () {
-      hideMenuHandler(overlay, mobileMenu, burger);
+if(burger) {
+  mainLinks.map(function(item){
+    item.addEventListener('click', function(){
+      hideMenuHandler(overlay,mobileMenu,burger)
     });
-  });
+  })
+
 }
 
-if(callBtn){
-  callBtn.addEventListener('click', function(e){
+if (callBtn) {
+  callBtn.addEventListener("click", function (e) {
     e.preventDefault;
     hideMenuHandler(overlay, mobileMenu, burger);
-  })
+  });
 }
 
 if (overlay) {
   mobileMenuHandler(overlay, mobileMenu, burger);
-  mobileMenuHandler(overlay, mobileMenu, mobileBurger);
   overlay.addEventListener("click", function (e) {
     if (e.target.classList.contains("overlay")) {
       hideMenuHandler(overlay, mobileMenu, burger);

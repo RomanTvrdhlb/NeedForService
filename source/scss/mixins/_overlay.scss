@@ -6,7 +6,7 @@
   left: 0;
   top: 0;
 
-  z-index: 1;
+  z-index: 85;
   padding: 20px 20px;
   overflow-y: scroll;
 
@@ -17,35 +17,11 @@
 
   visibility: hidden;
   opacity: 0;
-  background: rgba(var(--bg-b),0.36);
-  transition: all .6s;
+  background: rgba(var(--bg-b), 0.36);
+  transition: all 0.6s;
   transition-delay: 0.5s;
 
   pointer-events: none;
-
-  // &:not(.a-start){
-  //   .modal{
-  //     grid-row: initial;
-  //     grid-column: initial;
-  //     transform: translate(-50%, -50%);
-  //     top: 50%;
-  //     position: fixed;
-  //   }
-
-  //   &.active{
-  //     .modal.active{
-  //       position: absolute;
-  //       transform: translate(-50%, -50%);
-  //     }
-
-  //   }
-  // }
-
-  // @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  //   background: none;
-  //   background-color: rgba(0, 0, 0, 0.2);
-  // }
-
 
   &::-webkit-scrollbar {
     display: none;
@@ -57,7 +33,6 @@
 
   &.active {
     position: fixed;
-    z-index: 20;
 
     visibility: visible;
     opacity: 1;
@@ -66,5 +41,16 @@
 
     pointer-events: initial;
 
+    &--mode {
+      position: fixed;
+
+      visibility: visible;
+      opacity: 1;
+
+      transition: all 0.6s;
+
+      pointer-events: initial;
+      z-index: 50;
+    }
   }
 }

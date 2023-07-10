@@ -1,7 +1,7 @@
 .main-section{
     padding-top: calc( var(--header-height) + clamp(37px, 21.049vw, 293px));
     position: relative;
-    margin-bottom: clamp(20px, 6.466vw, 90px);
+    
     min-height: clamp(400px, 72.557vw, 1010px);
     @include small-tablet{
         padding-top: calc( var(--header-height) + clamp(50px, 16.96vw, 250px));
@@ -75,10 +75,6 @@
     &__box{
         display: flex;
         flex-direction: column;
-        grid-gap: clamp(108px, 20.474vw, 285px);
-
-        // @include small-tablet{
-        //     padding-bottom: 98px;
-        // }
+        grid-gap: 20px;
     }
 }

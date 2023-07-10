@@ -1,12 +1,8 @@
 import {addCustomClass, removeCustomClass, removeClassInArray} from '../functions/customFunctions';
 import vars from '../_vars';
-import SmoothScroll from 'smooth-scroll';
+import { enableScroll } from "../functions/enable-scroll";
 
 const {header,mainLinks,observSections} = vars
-
-const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 800,
-});
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -21,27 +17,24 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.4,
+  threshold: 0.4
 });
 
 observSections.forEach((section) => observer.observe(section))
 
 mainLinks.map(function(link){
   link.addEventListener('click', function(e){
-      e.preventDefault();
-      removeClassInArray(mainLinks, 'active');
-      addCustomClass(link, 'active');
-      const id = e.target.getAttribute('href').replace('#', '');
-      let headerHeight = header.clientHeight;
-      
-      window.scrollTo({
-        top: document.getElementById(id).offsetTop - (headerHeight),
-        behavior:"smooth"
-      })
-    
-    
-  
-    // window.pageYOffset <= headerHeight ?
+    e.preventDefault();    
+    const id = e.target.getAttribute('href').replace('#', '');
+    let headerHeight = header.clientHeight;
+    // window.scrollTo({
+    //   top: document.getElementById(id).offsetTop - (headerHeight),
+    //   behavior:"smooth"
+    // })
+
+    enableScroll(document.getElementById(id).offsetTop - (headerHeight))
+
+    // window.pageYOffset = headerHeight ?
     // removeCustomClass(link, 'active') : '';
   })
 })

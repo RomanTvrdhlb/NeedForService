@@ -13,9 +13,10 @@ export default {
   mainSlider: document.querySelector('.main-slider'),
   burger: document.querySelector('.header .burger'),
   mainLinks: [...document.querySelectorAll('.main-nav__link')],
-  mobileMenu: document.querySelector('.mobile-menu'),
+  mobileMenu: document.querySelector('.main-nav'),
   header: document.querySelector(".header"),
-  mobileBurger: document.querySelector('.mobile-menu .burger'),
+ 
+  
   // default variables
   mainCards: [...document.querySelectorAll('.main-card')],
   callBtn: document.querySelector('.header .callback-button'),

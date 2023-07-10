@@ -19,6 +19,15 @@ const swiper = new Swiper(mainSlider.querySelector('.main-slider__container'), {
     clickable: true,
   },
 
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    576: {
+      slidesPerView: 2,
+    },
+  },
+
 });
 }
 
