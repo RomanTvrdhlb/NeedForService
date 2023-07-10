@@ -824,23 +824,25 @@ fieldset {
 .modal {
   position: relative;
   left: 50%;
-  -webkit-transform: translate(-50%, 0vh);
-          transform: translate(-50%, 0vh);
+  -webkit-transform: translate(-50%, -100vh) scale(0);
+          transform: translate(-50%, -100vh) scale(0);
   opacity: 0;
   grid-row: 1;
   grid-column: 1;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: 1s 0;
+  transition: 1s 0;
   pointer-events: none;
+  visibility: hidden;
 }
 .modal.active {
   position: relative;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0) scale(1);
+          transform: translate(-50%, 0) scale(1);
   opacity: 1;
+  visibility: visible;
   z-index: 20;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
   pointer-events: initial;
 }
 .modal__close {
@@ -1069,7 +1071,7 @@ fieldset {
   position: fixed;
   z-index: 20;
   right: var(--container-offset);
-  bottom: 40px;
+  bottom: 12vh;
   width: clamp(60px, 5.747vw, 80px);
   height: clamp(60px, 5.747vw, 80px);
   display: -webkit-box;
@@ -1116,7 +1118,7 @@ fieldset {
 }
 @media (max-width: 767px) {
   .callback {
-    bottom: 30px;
+    bottom: 12dvh;
   }
 }
 
@@ -1214,6 +1216,10 @@ fieldset {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+.main-nav__link:hover::before {
+  visibility: visible;
+  opacity: 1;
+}
 .main-nav__link.active::before {
   visibility: visible;
   opacity: 1;
@@ -1236,8 +1242,8 @@ fieldset {
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%;
-    padding: 14px 15px 30px 10px;
-    background-color: rgba(var(--bg-d), 0.9);
+    padding: 14px 10px 30px 10px;
+    background-color: rgba(var(--bg-d), 1);
     -webkit-transform: translateX(120%);
             transform: translateX(120%);
     -webkit-transition: 0.4s;
@@ -1943,6 +1949,7 @@ fieldset {
   opacity: 0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  pointer-events: none;
 }
 .info-card:hover::before {
   opacity: 1;
@@ -2105,6 +2112,9 @@ header {
     background-color: rgba(var(--bg-d), 0.9);
     -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
             box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+  }
+  .header:has(.main-nav.active) {
+    background-color: rgba(var(--bg-d), 1);
   }
 }
 .header-box {

@@ -13,6 +13,12 @@ header {
   @include tablet {
     background-color: rgba(var(--bg-d), 0.9);
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+
+
+
+    &:has(.main-nav.active){
+      background-color: rgba(var(--bg-d), 1);
+    }
   }
 
   &-box {

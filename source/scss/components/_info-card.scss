@@ -17,6 +17,7 @@
         z-index: 1;
         opacity: 0;
         transition: all .4s;
+        pointer-events: none;
     }
 
     &:hover{
