@@ -66,7 +66,6 @@
     background-color: rgba(var(--bg-c),1.0);
     border-radius: 50%;
     filter: drop-shadow(0px 2px 30px rgba(0, 0, 0, 0.02));
-    transition: all .4s;
 
     svg{
         fill: var(--svg-fill-a);
@@ -98,6 +97,14 @@
         z-index: -2;
         background-color: rgba(var(--bg-c),.3);
         animation: 1.3s infinite alternate-reverse flash;
+    }
+
+    &.active{
+      right: calc(var(--container-offset) + 7px);
+
+      @include small-tablet{
+        right: var(--container-offset);
+      }
     }
 
     @include small-tablet{

@@ -1087,8 +1087,6 @@ fieldset {
   border-radius: 50%;
   -webkit-filter: drop-shadow(0px 2px 30px rgba(0, 0, 0, 0.02));
           filter: drop-shadow(0px 2px 30px rgba(0, 0, 0, 0.02));
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
 }
 .callback svg {
   fill: var(--svg-fill-a);
@@ -1115,6 +1113,14 @@ fieldset {
   z-index: -2;
   background-color: rgba(var(--bg-c), 0.3);
   animation: 1.3s infinite alternate-reverse flash;
+}
+.callback.active {
+  right: calc(var(--container-offset) + 7px);
+}
+@media (max-width: 767px) {
+  .callback.active {
+    right: var(--container-offset);
+  }
 }
 @media (max-width: 767px) {
   .callback {

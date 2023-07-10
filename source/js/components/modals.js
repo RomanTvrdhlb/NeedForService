@@ -8,6 +8,8 @@ import {
 } from "../functions/customFunctions";
 import { data } from "autoprefixer";
 
+const callBtn = document.querySelector('.callback');
+
 export function modalClickHandler(attribute, activeClass) {
   const curentModal = overlay.querySelector(`[data-popup="${attribute}"]`);
   removeClassInArray(modals, activeClass);
@@ -32,6 +34,7 @@ let innerButton;
 const commonFunction = function () {
   removeCustomClass(overlay, activeMode);
   removeCustomClass(overlay, activeClass);
+  removeCustomClass(callBtn, activeClass);
   removeClassInArray(modals, activeClass);
   enableScroll('');
 };
@@ -44,6 +47,7 @@ function buttonClickHandler(e, buttonAttribute, activeClass) {
   removeClassInArray(modals, activeClass);
   addCustomClass(overlay, activeClass);
   addCustomClass(curentModal, activeClass);
+  addCustomClass(callBtn, activeClass);
   disableScroll();
   innerButton = overlay.querySelector(
     `${"[data-popup]"}.${activeClass} .close`

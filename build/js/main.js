@@ -8714,6 +8714,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const callBtn = document.querySelector('.callback');
 function modalClickHandler(attribute, activeClass) {
   const curentModal = overlay.querySelector(`[data-popup="${attribute}"]`);
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(modals, activeClass);
@@ -8735,6 +8736,7 @@ let innerButton;
 const commonFunction = function () {
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(overlay, activeMode);
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(overlay, activeClass);
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(callBtn, activeClass);
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(modals, activeClass);
   (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_2__.enableScroll)('');
 };
@@ -8745,6 +8747,7 @@ function buttonClickHandler(e, buttonAttribute, activeClass) {
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeClassInArray)(modals, activeClass);
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.addCustomClass)(overlay, activeClass);
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.addCustomClass)(curentModal, activeClass);
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.addCustomClass)(callBtn, activeClass);
   (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_1__.disableScroll)();
   innerButton = overlay.querySelector(`${"[data-popup]"}.${activeClass} .close`);
 }
