@@ -7,15 +7,50 @@ header {
 
 .header {
   &-box {
-    padding: 14px;
+    padding: 14px 0;
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-gap: clamp(20px, 7.04vw, 98px);
     align-items: center;
+
+
+    @include tablet{
+      grid-template-columns: 1fr auto auto;
+      grid-gap: 20px;
+      .main-nav{
+        display: none;
+      }
+
+      .main-button{
+        display: none;
+      }
+    }
+
+    @include mobile{
+      grid-gap: 14px;
+    }
   }
 
   &.sticky{
     background-color: rgba(var(--bg-d),.9);
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10);
+  }
+
+  &__logo{
+    @include tablet{
+      height: 47px;
+      width: 132px;
+      svg{
+        height: 100%;
+      }
+    }
+  }
+
+  .callback-button{
+    display: none;
+
+    @include tablet{
+      display: flex;
+    }
   }
 }

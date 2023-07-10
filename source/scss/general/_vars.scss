@@ -26,8 +26,8 @@
 // --------------- default scroll variable ---------------
   --scrollbar-thumb: #1E47B0;
   --scrollbar-thumb-hover: #1d43a2;
-  --scrollbar-track:  #05031d;
-  --scrollbar-track-hover: #05031d;
+  --scrollbar-track:  #000000;
+  --scrollbar-track-hover: #000000;
   --overlay-bg: rgba(0, 0, 0, 0.5);
 
 // --------------- default slect variable ---------------
@@ -71,8 +71,8 @@
   --bg-b: #{HexToRGB(#000000)}; // rgba(var(--bg-b),1.0);
   --bg-c: #{HexToRGB(#1E47B0)}; // rgba(var(--bg-c),1.0);
   --bg-d: #{HexToRGB(#1D252D)}; // rgba(var(--bg-d),1.0);
+  --bg-e: #{HexToRGB(#C5C5C5)}; // rgba(var(--bg-e),1.0);
 
-  --bg-e: #{HexToRGB(#6866F6)}; // rgba(var(--bg-e),1.0);
   --bg-f: #{HexToRGB(#ABB8EB)}; // rgba(var(--bg-f),1.0);
   --bg-g: #{HexToRGB(#050E1D)}; // rgba(var(--bg-g),1.0);
   --bg-h: #{HexToRGB(#081428)}; // rgba(var(--bg-h),1.0);
@@ -119,4 +119,5 @@
 --svg-fill-c: #2D74FF; // var(--svg-fill-c);
 --svg-fill-d: #C4C4C4; // var(--svg-fill-d);
 --svg-fill-e: #1D252D; // var(--svg-fill-e);
+--svg-fill-f: #1E47B0; // var(--svg-fill-f);
 }

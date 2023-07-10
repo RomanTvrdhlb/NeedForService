@@ -1,11 +1,25 @@
 .advances-card{
-    display: flex;
+    display: grid;
     grid-gap: 22px;
     padding: 0 clamp(10px, 1.953vw, 20px) clamp(25px, 4.004vw, 41px) clamp(20px, 3.906vw, 40px);
     height: clamp(136px, 13.937vw, 194px);
     border-radius: 6px;
     background: rgba(var(--bg-b),1.0);
     position: relative;
+    grid-template-columns: 1fr auto;
+    max-width: 451px;
+
+    @include desktop{
+        grid-gap: 10px;
+    }
+
+    @include laptop{
+        padding-left: 20px;
+    }
+
+    @include tablet{
+        max-width: 100%;
+    }
 
     &:hover{
            .advances-card__icon{
@@ -15,7 +29,6 @@
         }
     }
 
-
     p{
         padding-top: clamp(75px, 6.681vw, 93px);
         color: rgba(var(--cl-a),1.0);
@@ -24,11 +37,17 @@
         font-style: normal;
         font-weight: 500;
         line-height: 150%;
-        flex-shrink: 0;
-        max-width: 222px;
 
-        @include laptop{
-            flex-shrink: 1;
+        @include tablet{
+            br{
+                display: none;
+            }
+        }
+
+        @include ios{
+            br{
+                display: inline;
+            } 
         }
     }
 
@@ -44,6 +63,18 @@
         font-style: normal;
         font-weight: 700;
         line-height: 130%;
+
+        @include desktop{
+            font-size: 80px;
+        }
+
+        @include laptop{
+            font-size: 70px;
+        }
+
+        @include tablet{
+            font-size: clamp(50px, 9.766vw, 100px);
+        }
     }
 
     &__icon{
@@ -65,12 +96,18 @@
             stroke: var(--svg-fill-c);
         }
 
-       
-
         &--mode{
             svg{
                 transform: translateY(-10%);
             }
+        }
+
+        @include laptop{
+            left: 20px;
+        }
+
+        @include small-tablet{
+            transform: translateY(60%);
         }
     }
 }

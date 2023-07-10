@@ -8,10 +8,11 @@ import {
   removeCustomClass,
   removeClassInArray,
 } from "../functions/customFunctions";
-const { overlay, burger, mobileMenu, mainLinks, mobileBurger, bodyEl } = vars;
+const { overlay, burger, mobileMenu, mainLinks, mobileBurger, bodyEl, callBtn } = vars;
 
-const mobileMenuHandler = function (overlay, mobileMenu, burger) {
-  burger.addEventListener("click", function () {
+const mobileMenuHandler = function (overlay, mobileMenu, btn) {
+  btn.addEventListener("click", function () {
+   
     toggleCustomClass(burger, "active");
     toggleCustomClass(mobileMenu, "active");
     toggleCustomClass(overlay, "active");
@@ -22,11 +23,14 @@ const mobileMenuHandler = function (overlay, mobileMenu, burger) {
       enableScroll();
     }
   });
+
+
 };
 
 const hideMenuHandler = function (overlay, mobileMenu, burger) {
   removeCustomClass(mobileMenu, "active");
   removeCustomClass(burger, "active");
+  removeCustomClass(mobileBurger, "active");
   removeCustomClass(overlay, "active");
   enableScroll();
 };
@@ -35,9 +39,15 @@ if (burger) {
   mainLinks.map(function (item) {
     item.addEventListener("click", function () {
       hideMenuHandler(overlay, mobileMenu, burger);
-      hideMenuHandler(overlay, mobileMenu, mobileBurger);
     });
   });
+}
+
+if(callBtn){
+  callBtn.addEventListener('click', function(e){
+    e.preventDefault;
+    hideMenuHandler(overlay, mobileMenu, burger);
+  })
 }
 
 if (overlay) {

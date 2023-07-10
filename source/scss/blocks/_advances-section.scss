@@ -5,6 +5,12 @@
     &__box{
         display: flex;
         flex-direction: column;
-        grid-gap: clamp(56px, 7.184vw, 100px);
+        grid-gap: clamp(50px, 7.184vw, 100px);
+    }
+
+    .default-top{
+        @include small-tablet{
+            padding-bottom: 6px;
+        }
     }
 }

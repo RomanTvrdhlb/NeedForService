@@ -14,9 +14,13 @@
             {'classMode':'header-box__nav'})
 
             <button data-btn-modal="callback" class="main-button">Забронювати візит</button>
-
+            <button data-btn-modal="callback" class="callback-button">
+              <svg width='26' height='26'>
+                <use href='img/sprite/sprite.svg#phone2'></use>
+              </svg>
+            </button>
             <button class="burger">
-              <svg width="18" height="10">
+              <svg width='22' height='14'>
                 <use href='img/sprite/sprite.svg#burger'></use>
               </svg>
             </button>
@@ -25,140 +29,47 @@
 
 
 
-  <!-- <div class="mobile-menu">
-    <div class="mobile-menu__header">
+  <div class="mobile-menu">
+    <div class="mobile-menu__top">
+      @include('../partials/components/header-logo.html',{
+        'ClassName':'header__logo',
+        'Link':'index.html',
+        'IconName':'logo',
+        'IconWidth':'132',
+        'IconHeight':'47'
+      })
       <button class="burger">
-        <svg width="18" height="10">
-          <use href='img/sprite/sprite.svg#burger'></use>
+        <svg width='22' height='14'>
+          <use href='img/sprite/sprite.svg#close'></use>
         </svg>
       </button>
-
-      <button class="mobile-menu__btn main-button mobile-link" data-btn-modal="connect">
-        Connect wallet
-        <svg width='18' height='18'>
-          <use href='img/sprite/sprite.svg#main-arrow '></use>
-        </svg>
-      </button>
-
-      <a href="index.html" class="header-logo mobile-menu__logo">
-        <img width='34' height='34' srcset='img/sprite/mobile-logo.svg'>
-      </a>
     </div>
 
-    <div class="mobile-menu__body">
-        <ul class="mobile-menu__list">
-          <li class="mobile-menu__item ">
-            <a href="index.html" class="mobile-menu__link mobile-link">
-              Home
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="modal.html" class="mobile-menu__link mobile-link global">
-              Trade
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="farming.html" class="mobile-menu__link mobile-link">
-              Farming
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="launch.html" class="mobile-menu__link mobile-link">
-              Launchpools
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="referral.html" class="mobile-menu__link mobile-link">
-              Referral program
-            </a>
-          </li>
-          <li class="mobile-menu__item" data-accordion-init>
-            <span class="mobile-menu__link" data-id="1">
-              More
-              <svg width='24' height='24'>
-                <use href='img/sprite/sprite.svg#arrow-bottom'></use>
-              </svg>
-            </span>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a href="#advances" class="main-nav__link active">
+            Наші переваги
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#info" class="main-nav__link">
+            Види робіт
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#pay" class="main-nav__link">
+            Оплата
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#contact" class="main-nav__link">
+            Контакти
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-            <ul class="mobile-hidden panel" data-content="1">
-              <li class="mobile-hidden__item">
-                <a href="token.html" class="mobile-menu__link mobile-link">
-                  About
-                </a>
-              </li>
-              <li class="mobile-hidden__item">
-                <a href="team.html" class="mobile-menu__link mobile-link">
-                  Team
-                </a>
-              </li>
-              <li class="mobile-hidden__item">
-                <a href="overview.html" class="mobile-menu__link mobile-link">
-                  Docs
-                </a>
-              </li>
-              <li class="mobile-hidden__item">
-                <a href="#" class="mobile-menu__link mobile-link">
-                  Audit
-                </a>
-              </li>
-            </ul>
-          </li>
-
-
-        </ul>
-
-        <ul class="main-social">
-          <li class="main-social__item">
-            <a href="#" class="main-social__link">
-              <svg width='38' height='38'>
-                <use href='img/sprite/sprite.svg#social'></use>
-              </svg>
-            </a>
-          </li>
-          <li class="main-social__item">
-            <a href="#" class="main-social__link">
-              <svg width='38' height='38'>
-                <use href='img/sprite/sprite.svg#social2'></use>
-              </svg>
-            </a>
-          </li>
-          <li class="main-social__item">
-            <a href="#" class="main-social__link">
-              <svg width='38' height='38'>
-                <use href='img/sprite/sprite.svg#social3'></use>
-              </svg>
-            </a>
-          </li>
-          <li class="main-social__item">
-            <a href="#" class="main-social__link">
-              <svg width='38' height='38'>
-                <use href='img/sprite/sprite.svg#social4'></use>
-              </svg>
-            </a>
-          </li>
-          <li class="main-social__item">
-            <a href="#" class="main-social__link">
-              <svg width='38' height='38'>
-                <use href='img/sprite/sprite.svg#social5'></use>
-              </svg>
-            </a>
-          </li>
-          <li class="main-social__item">
-            <a href="#" class="main-social__link">
-              <svg width='38' height='38'>
-                <use href='img/sprite/sprite.svg#social6'></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-
-        <span class="mobile-menu__label">
-          <svg width="94" height="25">
-            <use href='img/sprite/sprite.svg#main-logo'></use>
-          </svg>
-        </span>
-    </div>
-
-  </div> -->
+  </div>
 
 </header>

@@ -1,7 +1,7 @@
 // import './components/animations';
 import './components/getDinamicHeight';
-// import './components/sliders';
-// import './components/burger';
+import './components/sliders';
+import './components/burger';
 // import './components/buffer';
 import './components/modals';
 // import './components/tabs';
@@ -12,6 +12,7 @@ import './components/modals';
 // import './components/anchor';
 import './components/hoverCards';
 import './components/stickyHeader';
+import './components/observer';
 
 
 

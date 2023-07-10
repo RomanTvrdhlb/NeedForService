@@ -223,7 +223,7 @@ input[type="number"] {
   padding: 0 var(--container-offset);
 
   @include mobile{
-    padding: 0 calc(var(--container-offset) - 5px);
+    --container-offset: 10px;
   }
 }
 

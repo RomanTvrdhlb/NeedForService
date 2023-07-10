@@ -4,6 +4,7 @@
     background: rgba(var(--bg-a),1.0);
     padding: clamp(25px, 2.874vw, 40px) clamp(20px, 3.592vw, 50px);
     width: 768px;
+    z-index: 10;
 
     display: flex;
     align-items: center;
@@ -106,7 +107,9 @@
         }
 
         &--mode{
-
+            svg{
+                stroke: var(--svg-fill-f);
+              }
             @include mobile{
                 display: flex;
                 align-items: center;

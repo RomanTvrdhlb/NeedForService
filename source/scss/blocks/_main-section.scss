@@ -1,25 +1,84 @@
 .main-section{
     padding-top: calc( var(--header-height) + clamp(37px, 21.049vw, 293px));
     position: relative;
-    margin-bottom: clamp(50px, 6.466vw, 90px);
-
-    &__image{
+    margin-bottom: clamp(20px, 6.466vw, 90px);
+    min-height: clamp(400px, 72.557vw, 1010px);
+    @include small-tablet{
+        padding-top: calc( var(--header-height) + clamp(50px, 16.96vw, 250px));
+    }
+    &__wrapp{
         position: absolute;
         top: 0;
         z-index: -1;
         width: 100%;
-  
-        
+        background-color: rgba(var(--bg-b),1.0);
+        height: clamp(400px, 72.557vw, 1010px);
+        overflow: hidden;
+        display: flex;
+    }
+
+    &__bg{
+        width: 100%;
+        max-width: var(--container-width);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    &__image{
+
+        @media (max-width: (1850px)) {
+            transform: translateX(-10%);
+          }
+
+          @media (max-width: (1650px)) {
+            transform: translateX(-19%);
+          }
+
+          @include desktop{
+            transform: translateX(-25%);
+          }
+
+          @include mobile{
+            display: flex;
+            align-items: center;
+            transform: translateX(-29%);
+          }
         img,picture{
-            width: 100%;
-            height: 100%;
-            max-height: 1010px;
+            width: auto;
+            height: clamp(238px, 72.845vw, 1014px);
+            
+        }
+
+        &--car{
+            display: flex;
+            justify-content: flex-end;
+            transform: translateX(18%);
+            img,picture{
+                width: auto;
+                height: clamp(196px, 43.103vw, 600px);
+            }
+
+            @include mobile{
+                transform: translateX(38%);
+            }
+
+            @media (max-width: (400px)) {
+                transform: translateX(48%);
+              }
+        
         }
     }
 
     &__box{
         display: flex;
         flex-direction: column;
-        grid-gap: clamp(118px, 20.474vw, 285px);
+        grid-gap: clamp(108px, 20.474vw, 285px);
+
+        // @include small-tablet{
+        //     padding-bottom: 98px;
+        // }
     }
 }

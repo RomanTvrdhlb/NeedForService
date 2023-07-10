@@ -8,13 +8,23 @@
   <main>
 
     <section class="main-section">
-      <div class="main-section__image">
-        <picture>
-          <source type='image/webp' media='(max-width: 575px)' srcset='img/index/bgmob1.webp'>
-          <source media='(max-width: 575px)' srcset='img/index/bgmob1.png'>
-          <source type='image/webp' srcset='img/index/bg1.webp'>
-          <img width='1949' height='1014' src='img/index/bg1.png' alt='image'>
-        </picture>
+      <div class="main-section__wrapp">
+        <div class="main-section__image">
+          <picture>
+            <!-- <source type='image/webp' media='(max-width: 575px)' srcset='img/.webp'>
+            <source media='(max-width: 575px)' srcset='img/.png'> -->
+            <source type='image/webp' srcset='img/index/mechanic.webp'>
+            <img width='1013' height='1014' src='img/index/mechanic.png' alt='image'>
+          </picture>
+        </div>
+        <div class="main-section__bg">
+          <div class="main-section__image main-section__image--car">
+            <picture>
+              <source type='image/webp' srcset='img/index/car1.webp'>
+              <img width='1140' height='600' src='img/index/car1.png' alt='image'>
+            </picture>
+          </div>
+        </div>
       </div>
       <div class="container">
         <div class="main-section__box">
@@ -66,16 +76,56 @@
                 </svg>
               </a>
             </li>
-
           </ul>
-
         </div>
       </div>
     </section>
 
-    <section class="advances-section">
+    <section class="advances-section section-observe" id="advances">
       <div class="container">
         <div class="advances-section__box">
+          <div class='main-slider'>
+            <div class='main-slider__container swiper-container'>
+              <ul class='main-slider__wrapper swiper-wrapper'>
+                <li class='main-slider__slide swiper-slide'>
+                  <a href="#" class="main-card">
+                    <div class="main-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/img1.webp'>
+                        <img width='464' height='300' src='img/index/img1.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="main-card__title">Власні складські приміщення</span>
+                  </a>
+                </li>
+                <li class='main-slider__slide swiper-slide'>
+                  <a href="#" class="main-card">
+                    <div class="main-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/img3.webp'>
+                        <img width='464' height='300' src='img/index/img3.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="main-card__title">Професійний рівень діагностики
+                      та пошуку несправностей</span>
+                  </a>
+                </li>
+                <li class='main-slider__slide swiper-slide'>
+                  <a href="#" class="main-card">
+                    <div class="main-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/img1.webp'>
+                        <img width='464' height='300' src='img/index/img1.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="main-card__title">Професійний підбір та своєчасна поставка високоякісних автозапчастин
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <span class='main-slider__pagination'></span>
+          </div>
           <div class="default-top">
             <p>ТРОХИ ПРО НАС</p>
             <h1 class="default-top__title">Наші переваги</h1>
@@ -92,6 +142,11 @@
                 </div>
                 <span class="advances-card__number">01</span>
               </a>
+              <a href="tel:+380733131101" class="callback">
+                <svg width='32' height='32'>
+                  <use href='img/sprite/sprite.svg#phone'></use>
+                </svg>
+              </a>
             </li>
             <li class="advances-list__item">
               <a href="#" class="advances-card">
@@ -106,7 +161,7 @@
             </li>
             <li class="advances-list__item">
               <a href="#" class="advances-card">
-                <p>Індивідуальний підхід
+                <p>Індивідуальний підхід<br>
                   до кожного клієнта</p>
                 <div class="advances-card__icon">
                   <svg width='34' height='42'>
@@ -121,7 +176,7 @@
       </div>
     </section>
 
-    <section class="info-section">
+    <section class="info-section section-observe" id="info">
       <div class="info-section__picture">
         <picture>
           <source type='image/webp' srcset='img/index/bg2.webp'>
@@ -283,7 +338,7 @@
       </div>
     </section>
 
-    <section class="pay-section">
+    <section class="pay-section section-observe" id="pay">
       <div class="container">
         <div class="pay-section__box">
 
@@ -315,7 +370,7 @@
       </div>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section section-observe" id="contact">
       <div class="contact-section__wrapper">
         <div class="contact-section__picture">
           <picture>

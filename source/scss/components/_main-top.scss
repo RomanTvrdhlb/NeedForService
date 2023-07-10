@@ -10,7 +10,19 @@
         font-style: normal;
         font-weight: 700;
         line-height: 130%;
-        max-width: clamp(191px, 41.307vw, 575px);
+        max-width: clamp(270px, 41.307vw, 575px);
+
+        @include small-tablet{
+            max-width: clamp(191px, 55.573vw, 350px);
+        }
+        @include mobile{
+            max-width: 300px;
+        }
+
+        @include ios{
+            max-width: 200px;
+        }
+     
     }
 
     p{

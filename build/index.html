@@ -38,7 +38,7 @@
 <nav class="main-nav header-box__nav">
   <ul class="main-nav__list">
     <li class="main-nav__item">
-      <a href="#" class="main-nav__link mode">
+      <a href="#" class="main-nav__link active">
         Наші переваги
       </a>
     </li>
@@ -62,9 +62,13 @@
 
 
             <button data-btn-modal="callback" class="main-button">Забронювати візит</button>
-
+            <button data-btn-modal="callback" class="callback-button">
+              <svg width='26' height='26'>
+                <use href='img/sprite/sprite.svg#phone2'></use>
+              </svg>
+            </button>
             <button class="burger">
-              <svg width="18" height="10">
+              <svg width='22' height='14'>
                 <use href='img/sprite/sprite.svg#burger'></use>
               </svg>
             </button>
@@ -73,141 +77,50 @@
 
 
 
-  <!-- <div class="mobile-menu">
-    <div class="mobile-menu__header">
+  <div class="mobile-menu">
+    <div class="mobile-menu__top">
+      
+
+
+<a href="index.html" class="header-logo header__logo">
+  <svg width='132' height='47'>
+    <use href='img/sprite/sprite.svg#logo'></use>
+  </svg>
+</a>
+
       <button class="burger">
-        <svg width="18" height="10">
-          <use href='img/sprite/sprite.svg#burger'></use>
+        <svg width='22' height='14'>
+          <use href='img/sprite/sprite.svg#close'></use>
         </svg>
       </button>
-
-      <button class="mobile-menu__btn main-button mobile-link" data-btn-modal="connect">
-        Connect wallet
-        <svg width='18' height='18'>
-          <use href='img/sprite/sprite.svg#main-arrow '></use>
-        </svg>
-      </button>
-
-      <a href="index.html" class="header-logo mobile-menu__logo">
-        <img width='34' height='34' srcset='img/sprite/mobile-logo.svg'>
-      </a>
     </div>
 
-    <div class="mobile-menu__body">
-        <ul class="mobile-menu__list">
-          <li class="mobile-menu__item ">
-            <a href="index.html" class="mobile-menu__link mobile-link">
-              Home
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="modal.html" class="mobile-menu__link mobile-link global">
-              Trade
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="farming.html" class="mobile-menu__link mobile-link">
-              Farming
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="launch.html" class="mobile-menu__link mobile-link">
-              Launchpools
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="referral.html" class="mobile-menu__link mobile-link">
-              Referral program
-            </a>
-          </li>
-          <li class="mobile-menu__item" data-accordion-init>
-            <span class="mobile-menu__link" data-id="1">
-              More
-              <svg width='24' height='24'>
-                <use href='img/sprite/sprite.svg#arrow-bottom'></use>
-              </svg>
-            </span>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a href="#advances" class="main-nav__link active">
+            Наші переваги
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#info" class="main-nav__link">
+            Види робіт
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#pay" class="main-nav__link">
+            Оплата
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#contact" class="main-nav__link">
+            Контакти
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-            <ul class="mobile-hidden panel" data-content="1">
-              <li class="mobile-hidden__item">
-                <a href="token.html" class="mobile-menu__link mobile-link">
-                  About
-                </a>
-              </li>
-              <li class="mobile-hidden__item">
-                <a href="team.html" class="mobile-menu__link mobile-link">
-                  Team
-                </a>
-              </li>
-              <li class="mobile-hidden__item">
-                <a href="overview.html" class="mobile-menu__link mobile-link">
-                  Docs
-                </a>
-              </li>
-              <li class="mobile-hidden__item">
-                <a href="#" class="mobile-menu__link mobile-link">
-                  Audit
-                </a>
-              </li>
-            </ul>
-          </li>
-
-
-        </ul>
-
-        <ul class="main-social">
-          <li class="main-social__item">
-            <a href="#" class="main-social__link">
-              <svg width='38' height='38'>
-                <use href='img/sprite/sprite.svg#social'></use>
-              </svg>
-            </a>
-          </li>
-          <li class="main-social__item">
-            <a href="#" class="main-social__link">
-              <svg width='38' height='38'>
-                <use href='img/sprite/sprite.svg#social2'></use>
-              </svg>
-            </a>
-          </li>
-          <li class="main-social__item">
-            <a href="#" class="main-social__link">
-              <svg width='38' height='38'>
-                <use href='img/sprite/sprite.svg#social3'></use>
-              </svg>
-            </a>
-          </li>
-          <li class="main-social__item">
-            <a href="#" class="main-social__link">
-              <svg width='38' height='38'>
-                <use href='img/sprite/sprite.svg#social4'></use>
-              </svg>
-            </a>
-          </li>
-          <li class="main-social__item">
-            <a href="#" class="main-social__link">
-              <svg width='38' height='38'>
-                <use href='img/sprite/sprite.svg#social5'></use>
-              </svg>
-            </a>
-          </li>
-          <li class="main-social__item">
-            <a href="#" class="main-social__link">
-              <svg width='38' height='38'>
-                <use href='img/sprite/sprite.svg#social6'></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-
-        <span class="mobile-menu__label">
-          <svg width="94" height="25">
-            <use href='img/sprite/sprite.svg#main-logo'></use>
-          </svg>
-        </span>
-    </div>
-
-  </div> -->
+  </div>
 
 </header>
 
@@ -215,13 +128,23 @@
   <main>
 
     <section class="main-section">
-      <div class="main-section__image">
-        <picture>
-          <source type='image/webp' media='(max-width: 575px)' srcset='img/index/bgmob1.webp'>
-          <source media='(max-width: 575px)' srcset='img/index/bgmob1.png'>
-          <source type='image/webp' srcset='img/index/bg1.webp'>
-          <img width='1949' height='1014' src='img/index/bg1.png' alt='image'>
-        </picture>
+      <div class="main-section__wrapp">
+        <div class="main-section__image">
+          <picture>
+            <!-- <source type='image/webp' media='(max-width: 575px)' srcset='img/.webp'>
+            <source media='(max-width: 575px)' srcset='img/.png'> -->
+            <source type='image/webp' srcset='img/index/mechanic.webp'>
+            <img width='1013' height='1014' src='img/index/mechanic.png' alt='image'>
+          </picture>
+        </div>
+        <div class="main-section__bg">
+          <div class="main-section__image main-section__image--car">
+            <picture>
+              <source type='image/webp' srcset='img/index/car1.webp'>
+              <img width='1140' height='600' src='img/index/car1.png' alt='image'>
+            </picture>
+          </div>
+        </div>
       </div>
       <div class="container">
         <div class="main-section__box">
@@ -273,16 +196,56 @@
                 </svg>
               </a>
             </li>
-
           </ul>
-
         </div>
       </div>
     </section>
 
-    <section class="advances-section">
+    <section class="advances-section section-observe" id="advances">
       <div class="container">
         <div class="advances-section__box">
+          <div class='main-slider'>
+            <div class='main-slider__container swiper-container'>
+              <ul class='main-slider__wrapper swiper-wrapper'>
+                <li class='main-slider__slide swiper-slide'>
+                  <a href="#" class="main-card">
+                    <div class="main-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/img1.webp'>
+                        <img width='464' height='300' src='img/index/img1.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="main-card__title">Власні складські приміщення</span>
+                  </a>
+                </li>
+                <li class='main-slider__slide swiper-slide'>
+                  <a href="#" class="main-card">
+                    <div class="main-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/img3.webp'>
+                        <img width='464' height='300' src='img/index/img3.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="main-card__title">Професійний рівень діагностики
+                      та пошуку несправностей</span>
+                  </a>
+                </li>
+                <li class='main-slider__slide swiper-slide'>
+                  <a href="#" class="main-card">
+                    <div class="main-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/img1.webp'>
+                        <img width='464' height='300' src='img/index/img1.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="main-card__title">Професійний підбір та своєчасна поставка високоякісних автозапчастин
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <span class='main-slider__pagination'></span>
+          </div>
           <div class="default-top">
             <p>ТРОХИ ПРО НАС</p>
             <h1 class="default-top__title">Наші переваги</h1>
@@ -299,6 +262,11 @@
                 </div>
                 <span class="advances-card__number">01</span>
               </a>
+              <a href="tel:+380733131101" class="callback">
+                <svg width='32' height='32'>
+                  <use href='img/sprite/sprite.svg#phone'></use>
+                </svg>
+              </a>
             </li>
             <li class="advances-list__item">
               <a href="#" class="advances-card">
@@ -313,7 +281,7 @@
             </li>
             <li class="advances-list__item">
               <a href="#" class="advances-card">
-                <p>Індивідуальний підхід
+                <p>Індивідуальний підхід<br>
                   до кожного клієнта</p>
                 <div class="advances-card__icon">
                   <svg width='34' height='42'>
@@ -328,7 +296,7 @@
       </div>
     </section>
 
-    <section class="info-section">
+    <section class="info-section section-observe" id="info">
       <div class="info-section__picture">
         <picture>
           <source type='image/webp' srcset='img/index/bg2.webp'>
@@ -490,7 +458,7 @@
       </div>
     </section>
 
-    <section class="pay-section">
+    <section class="pay-section section-observe" id="pay">
       <div class="container">
         <div class="pay-section__box">
 
@@ -522,7 +490,7 @@
       </div>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section section-observe" id="contact">
       <div class="contact-section__wrapper">
         <div class="contact-section__picture">
           <picture>

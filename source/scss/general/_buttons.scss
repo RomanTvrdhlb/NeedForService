@@ -7,7 +7,27 @@
     background-position: right;
   }
 }    
-    
+    .callback-button{
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg{
+        stroke: var(--svg-fill-a);
+        transition: all .4s;
+        fill: transparent;
+      }
+
+      &:hover{
+        svg{
+          stroke: var(--svg-fill-f);
+        }
+      }
+    }
+
+
     .main-button {
     display: flex;
     width: 203px;
