@@ -12,11 +12,5 @@
 
     &__item{
       position: relative;
-
-      .callback{
-        @include small-tablet{
-          display: none;
-        }
-      }
     }
 }

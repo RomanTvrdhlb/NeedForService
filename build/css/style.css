@@ -1066,10 +1066,10 @@ fieldset {
 }
 
 .callback {
-  position: absolute;
+  position: fixed;
   z-index: 20;
-  right: 0;
-  top: 42px;
+  right: var(--container-offset);
+  bottom: 40px;
   width: clamp(60px, 5.747vw, 80px);
   height: clamp(60px, 5.747vw, 80px);
   display: -webkit-box;
@@ -1113,6 +1113,11 @@ fieldset {
   z-index: -2;
   background-color: rgba(var(--bg-c), 0.3);
   animation: 1.3s infinite alternate-reverse flash;
+}
+@media (max-width: 767px) {
+  .callback {
+    bottom: 30px;
+  }
 }
 
 @keyframes flash {
@@ -1230,7 +1235,6 @@ fieldset {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    max-width: 320px;
     width: 100%;
     padding: 14px 15px 30px 10px;
     background-color: rgba(var(--bg-d), 0.9);
@@ -2042,11 +2046,6 @@ fieldset {
 .main-list__item {
   position: relative;
 }
-@media (max-width: 767px) {
-  .main-list__item .callback {
-    display: none;
-  }
-}
 
 .advances-list {
   display: grid;
@@ -2061,11 +2060,6 @@ fieldset {
 }
 .advances-list__item {
   position: relative;
-}
-@media (min-width: 768px) {
-  .advances-list .callback {
-    display: none;
-  }
 }
 
 .info-list {

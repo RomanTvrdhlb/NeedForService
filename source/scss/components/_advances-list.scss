@@ -11,11 +11,4 @@
     &__item{
         position: relative;
     }
-
-
-    .callback{
-        @include for-small-tablet{
-            display: none;
-        }
-    }
 }
