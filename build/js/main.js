@@ -8481,18 +8481,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_hoverCards__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/hoverCards */ "./source/js/components/hoverCards.js");
 /* harmony import */ var _components_stickyHeader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/stickyHeader */ "./source/js/components/stickyHeader.js");
 /* harmony import */ var _components_observer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/observer */ "./source/js/components/observer.js");
-// import './components/animations';
 
 
 
-// import './components/buffer';
 
-// import './components/tabs';
-// import './components/select';
-// import './components/replaceEl';
-// import './components/accordions';
-// import './components/range';
-// import './components/anchor';
 
 
 
@@ -8523,15 +8515,8 @@ __webpack_require__.r(__webpack_exports__);
   mainLinks: [...document.querySelectorAll('.main-nav__link')],
   mobileMenu: document.querySelector('.main-nav'),
   header: document.querySelector(".header"),
-  // default variables
   mainCards: [...document.querySelectorAll('.main-card')],
   callBtn: document.querySelector('.header .callback-button')
-
-  // logoSlider: [...document.querySelectorAll('.payment-slider .swiper-container')],
-
-  // observSections: [...document.querySelectorAll('.section-observe')],
-  // formsSecond: '.contacts-section__form',
-  // formsFirst: '.contact-section__form',
 });
 
 /***/ }),
@@ -8898,13 +8883,6 @@ function stickyHeaderFunction(breakpoint) {
   }
 }
 stickyHeaderFunction(320);
-
-// window.addEventListener('resize', () => {
-//   stickyHeaderFunction(1024)
-// });
-// window.addEventListener('DOMContentLoaded', () => {
-//   stickyHeaderFunction(1024)
-// });
 
 /***/ }),
 

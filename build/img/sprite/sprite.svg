@@ -1,4 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+<clipPath id="clip0_166_26">
+<rect width="51.3342" height="60.8692" fill="white"/>
+</clipPath>
+
 <clipPath id="clip0_105_97">
 <rect width="34.14" height="41.7546" fill="white" transform="translate(0.859863 0.38269)"/>
 </clipPath>
@@ -50,6 +54,17 @@
 </symbol><symbol id="close2" viewBox="0 0 20 20">
 <line x1="19.2071" y1="1.20711" x2="1.20726" y2="19.207" stroke="#fff" stroke-width="2"/>
 <line x1="1.20711" y1="0.84221" x2="19.207" y2="18.8421" stroke="#fff" stroke-width="2"/>
+</symbol><symbol id="fav" viewBox="0 0 52 61">
+<g clip-path="url(#clip0_166_26)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.9002 56.9955L12.4003 53.0558L6.96666 34.5937V49.7649L0.00012207 45.5449V14.746L6.96666 10.6815L12.0667 30.4003L12.0933 7.66897L18.9002 3.71704L18.7181 30.1056L18.9002 56.9955Z" fill="#1E47B0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.537 1.59473V59.1976L21.8555 58.7862L21.7634 30.2283L21.8739 1.98153L22.537 1.59473Z" fill="#1E47B0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.537 1.59473V59.1976L21.8555 58.7862L21.7634 30.2283L21.8739 1.98153L22.537 1.59473Z" fill="#1E47B0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.7323 0.894531V59.9218L23.0549 59.5125L22.9567 29.5261L23.0692 1.28133L23.7323 0.894531Z" fill="#1E47B0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M21.1372 2.41309V58.35L20.4741 57.9489V30.0909V2.79989L21.1372 2.41309Z" fill="#1E47B0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M37.0781 30.2588L27.5493 25.1608V59.5535L25.294 60.8694L24.4651 60.366L24.3873 0.515981L25.2714 0.000244141L37.0781 6.74166V14.3754L27.5493 9.47179V17.6806L37.1846 22.8359L37.0781 30.2588Z" fill="#FEC200"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M51.3344 45.6758L29.387 58.4812L29.4525 46.7482L29.387 34.7389L37.078 38.8546V45.4589L45.4874 41.0096V34.7594L38.9199 31.2454V7.79785L51.3344 14.9138V28.2493L45.4874 25.2408V18.704L43.8869 17.8793V21.9908V26.4217L51.3344 30.4084V45.6758Z" fill="#FEC200"/>
+</g>
+
 </symbol><symbol id="human" viewBox="0 0 35 43">
 <g id="human 1" clip-path="url(#clip0_105_97)">
 <path id="Vector" d="M27.3395 10.3983C27.2438 13.2428 26.309 15.9956 24.6526 18.3101C22.7547 21.0313 20.3423 22.5176 17.8841 22.5176C15.4259 22.5176 13.0135 21.0313 11.1155 18.3101C9.45921 15.9956 8.52439 13.2428 8.42871 10.3983C8.42871 7.89053 9.4249 5.48552 11.1981 3.71229C12.9714 1.93906 15.3764 0.942871 17.8841 0.942871C20.3918 0.942871 22.7968 1.93906 24.5701 3.71229C26.3433 5.48552 27.3395 7.89053 27.3395 10.3983Z" stroke-miterlimit="10"/>

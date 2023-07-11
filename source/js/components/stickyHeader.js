@@ -28,9 +28,3 @@ function stickyHeaderFunction(breakpoint){
 
 stickyHeaderFunction(320);
 
-// window.addEventListener('resize', () => {
-//   stickyHeaderFunction(1024)
-// });
-// window.addEventListener('DOMContentLoaded', () => {
-//   stickyHeaderFunction(1024)
-// });
